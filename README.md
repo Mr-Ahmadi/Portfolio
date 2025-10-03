@@ -46,12 +46,14 @@ A modern, responsive personal portfolio website showcasing my academic journey, 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Mr-Ahmadi/portfolio.git
 cd portfolio
 ```
 
 2. Open `index.html` in your browser:
+
 ```bash
 open index.html
 # or
@@ -74,23 +76,28 @@ Portfolio/
 ## ✨ Key Features Implementation
 
 ### Smooth Scrolling
+
 - Custom smooth scroll behavior for navigation links
 - Automatic adjustment for fixed navbar height
 
 ### Active Navigation Highlighting
+
 - Real-time active section detection while scrolling
 - Visual feedback for current page section
 
 ### Mobile Navigation
+
 - Responsive hamburger menu for mobile devices
 - Click-outside-to-close functionality
 - Scroll prevention when menu is open
 
 ### Intersection Observer Animations
+
 - Fade-in animations for cards and timeline items
 - Performance-optimized with threshold settings
 
 ### Accessibility Features
+
 - Keyboard navigation support
 - Focus indicators for interactive elements
 - Semantic HTML structure
@@ -99,7 +106,9 @@ Portfolio/
 ## 🎯 Customization Guide
 
 ### Changing Colors
+
 Edit CSS variables in `styles.css`:
+
 ```css
 :root {
     --primary-color: #2d3748;
@@ -109,12 +118,14 @@ Edit CSS variables in `styles.css`:
 ```
 
 ### Adding New Sections
+
 1. Add section HTML in `index.html`
 2. Add navigation link in navbar
 3. Style the section in `styles.css`
 4. Update JavaScript arrays if needed
 
 ### Modifying Content
+
 - Update personal information in the HTML
 - Replace project details and links
 - Update CV file in assets folder
@@ -147,7 +158,7 @@ Edit CSS variables in `styles.css`:
 
 ## 📧 Contact
 
-- **Email**: mr-ahmadi2004@outlook.com
+- **Email**: <mr-ahmadi2004@outlook.com>
 - **GitHub**: [@Mr-Ahmadi](https://github.com/Mr-Ahmadi)
 - **LinkedIn**: [Ali Ahmadi Esfidi](https://linkedin.com/in/ali-ahmadi-esfidi)
 - **Phone**: +98 904 4478 539
