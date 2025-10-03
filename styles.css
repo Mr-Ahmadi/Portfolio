@@ -765,7 +765,7 @@ body {
 
 .projects-slider-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 2rem auto 0;
     padding: 0 60px;
 }
@@ -783,7 +783,7 @@ body {
 .project-card {
     min-width: 100%;
     background: var(--card-bg);
-    padding: clamp(2rem, 4vw, 3rem);
+    padding: clamp(1rem, 2vw, 2rem);
     border: 3px solid var(--border-color);
     border-radius: 15px 255px 15px 225px/225px 15px 255px 15px;
     box-shadow: var(--shadow);
