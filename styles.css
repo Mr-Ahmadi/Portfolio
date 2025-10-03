@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* CSS Variables */
 :root {
     --primary-color: #2d3748;
