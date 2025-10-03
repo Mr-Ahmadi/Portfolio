@@ -3,9 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ali Ahmadi Esfidi - Computer Science Student, ML Enthusiast, AI Researcher">
+    <title>Ali Ahmadi Esfidi | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="40149912.png" alt="Ali Ahmadi Logo" class="logo-img">
+                <span>Ali Ahmadi</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="home-content">
+                <div class="profile-sketch">
+                    <div class="profile-image">
+                        <div class="image-placeholder">👨‍💻</div>
+                    </div>
+                </div>
+                <div class="home-text">
+                    <h1 class="sketch-heading">Hi, I'm <span class="highlight">Ali Ahmadi Esfidi</span></h1>
+                    <p class="tagline">Computer Science Student | ML Enthusiast | AI Researcher</p>
+                    <p class="description">
+                        A passionate Computer Science student at Amirkabir University of Technology,
+                        specializing in Machine Learning, Reinforcement Learning, and Computational Biology.
+                        I love building innovative solutions and exploring the intersection of AI and biology.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sketch-arrow">
+            <a href="#about">↓</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-main-grid">
+                <div class="about-left">
+                    <!-- Personal Information -->
+                    <div class="about-card">
+                        <div class="card-icon">📋</div>
+                        <h3>Personal Information</h3>
+                        <ul class="info-list">
+                            <li><strong>Name:</strong> Ali Ahmadi Esfidi</li>
+                            <li><strong>Education:</strong> BS in Computer Science</li>
+                            <li><strong>University:</strong> Amirkabir University of Technology</li>
+                            <li><strong>GPA:</strong> 18.83/20.0</li>
+                            <li><strong>Period:</strong> Sept 2022 - Jun 2026</li>
+                            <li><strong>Email:</strong> mr-ahmadi2004@outlook.com</li>
+                            <li><strong>Phone:</strong> +98 904 4478 539</li>
+                        </ul>
+                    </div>
+
+                    <!-- Fields of Interest -->
+                    <div class="about-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Fields of Interest</h3>
+                        <div class="interests-grid">
+                            <div class="interest-tag">
+                                <i class="fas fa-robot"></i>
+                                <span>Reinforcement Learning</span>
+                            </div>
+                            <div class="interest-tag">
+                                <i class="fas fa-brain"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="interest-tag">
+                                <i class="fas fa-dna"></i>
+                                <span>Computational Biology</span>
+                            </div>
+                            <div class="interest-tag">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Deep Learning</span>
+                            </div>
+                            <div class="interest-tag">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </div>
+                            <div class="interest-tag">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Algorithm Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <!-- Skills & Technologies -->
+                    <div class="about-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-section">
+                            <div class="skill-category">
+                                <h4>Languages</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">C/C++</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">C#</span>
+                                    <span class="skill-tag">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Technologies</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">NodeJS</span>
+                                    <span class="skill-tag">ReactJS</span>
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">BioPython</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Relevant Coursework -->
+                    <div class="about-card">
+                        <div class="card-icon">📚</div>
+                        <h3>Relevant Coursework</h3>
+                        <div class="coursework-grid">
+                            <div class="course-item">
+                                <span class="course-name">Protein & Nucleic Sequence Analysis</span>
+                                <span class="course-grade">20/20</span>
+                            </div>
+                            <div class="course-item">
+                                <span class="course-name">Artificial Intelligence & Workshop</span>
+                                <span class="course-grade">20/20</span>
+                            </div>
+                            <div class="course-item">
+                                <span class="course-name">Data Structures & Algorithms</span>
+                                <span class="course-grade">20/20</span>
+                            </div>
+                            <div class="course-item">
+                                <span class="course-name">Advanced Programming & Workshop</span>
+                                <span class="course-grade">20/20</span>
+                            </div>
+                            <div class="course-item">
+                                <span class="course-name">Graph Theory</span>
+                                <span class="course-grade">20/20</span>
+                            </div>
+                            <div class="course-item">
+                                <span class="course-name">Theory of Computation</span>
+                                <span class="course-grade">19/20</span>
+                            </div>
+                            <div class="course-item">
+                                <span class="course-name">Fundamental of Bioinformatics</span>
+                                <span class="course-grade">18.5/20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV Download Section -->
+            <div class="cv-download-section">
+                <div class="cv-card">
+                    <div class="cv-icon">📄</div>
+                    <div class="cv-text">
+                        <h3>Download My CV</h3>
+                        <p>Get a complete overview of my experience, education, and skills.</p>
+                    </div>
+                    <a href="Curriculum_Vitae-8.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i> Download CV (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+
+            <!-- Research Positions -->
+            <div class="experience-category">
+                <h3 class="category-title">
+                    <i class="fas fa-flask"></i> Research Positions
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Research Assistant - NORC Lab</h4>
+                                <span class="timeline-date">Mar 2025 - Present</span>
+                            </div>
+                            <p class="timeline-institution">Amirkabir University</p>
+                            <p class="timeline-detail">Supervisor: Dr. Ghatee</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Research Assistant - High Performance Networks Lab</h4>
+                                <span class="timeline-date">Sept 2024 - Present</span>
+                            </div>
+                            <p class="timeline-institution">Tehran University</p>
+                            <p class="timeline-detail">Supervisor: Dr. Khonsari</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teaching Positions -->
+            <div class="experience-category">
+                <h3 class="category-title">
+                    <i class="fas fa-chalkboard-teacher"></i> Teaching Positions
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Teaching Assistant - Quantum Information Processing</h4>
+                                <span class="timeline-date">Sept 2025 - Present</span>
+                            </div>
+                            <p class="timeline-institution">Tehran University</p>
+                            <p class="timeline-detail">Instructor: Dr. Khonsari</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Teaching Assistant - Introduction To Logic</h4>
+                                <span class="timeline-date">Sept 2025 - Present</span>
+                            </div>
+                            <p class="timeline-institution">Amirkabir University</p>
+                            <p class="timeline-detail">Instructor: Dr. Didehvar</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Teaching Assistant - Theory Of Computation</h4>
+                                <span class="timeline-date">Sept 2024 - Jan 2025</span>
+                            </div>
+                            <p class="timeline-institution">Amirkabir University</p>
+                            <p class="timeline-detail">Instructor: Dr. Didehvar</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Teaching Assistant - Artificial Intelligence & Workshop</h4>
+                                <span class="timeline-date">Sept 2024 - Jan 2025</span>
+                            </div>
+                            <p class="timeline-institution">Amirkabir University</p>
+                            <p class="timeline-detail">Instructors: Dr. Ghatee, Dr. Yousefimehr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div class="experience-category">
+                <h3 class="category-title">
+                    <i class="fas fa-certificate"></i> Certificates
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Introduction to Bioinformatics</h4>
+                                <span class="timeline-date">Feb 2025 - Jul 2025</span>
+                            </div>
+                            <p class="timeline-institution">Biocan</p>
+                            <p class="timeline-detail">Scientific Chair: Dr. K. Kavousi</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>New Methods Of Cancer Treatment</h4>
+                                <span class="timeline-date">Feb 2025</span>
+                            </div>
+                            <p class="timeline-institution">Biocan</p>
+                            <p class="timeline-detail">Head Of Webinar: Prof. Hamidieh</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Scrum Foundations Course</h4>
+                                <span class="timeline-date">Dec 2024</span>
+                            </div>
+                            <p class="timeline-institution">Ultima Training Tech Co.</p>
+                            <p class="timeline-detail">Instructor: Josef Balahan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <div class="experience-category">
+                <h3 class="category-title">
+                    <i class="fas fa-book"></i> Publications
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Irrigation Optimization in Agricultural Fields Using DRL Approaches</h4>
+                                <span class="timeline-date">Feb 2025</span>
+                            </div>
+                            <p class="timeline-institution">Parsa Heidari, Ali Ahmadi Esfidi, Ali Mehrvarz, Elaheh Khodaei, Ahmad Khonsari</p>
+                            <a href="https://doi.org/10.1109/CSIICC65765.2025.10967419" class="publication-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> DOI: 10.1109/CSIICC65765.2025.10967419
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">🌉</div>
+                    <div class="project-header">
+                        <h3>Halley Project: Bridge Damage Diagnosis App</h3>
+                        <span class="project-date">Mar 2025 - Present</span>
+                    </div>
+                    <p class="project-description">
+                        Industrial project launched by the NORC Lab, focused on developing an application
+                        for diagnosing bridge damage. Worked as a ReactJS and Express.js developer and
+                        contributed to the design and implementation of computer vision models for damage detection.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">ReactJS</span>
+                        <span class="project-tag">Express.js</span>
+                        <span class="project-tag">Computer Vision</span>
+                        <span class="project-tag">Industrial</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">🌱</div>
+                    <div class="project-header">
+                        <h3>Irrigation Optimization using DRL Algorithms</h3>
+                        <span class="project-date">Feb 2025 - Present</span>
+                    </div>
+                    <p class="project-description">
+                        Collaborated on implementing DRL algorithms (DDPG, PPO, A2C, D3QN) to optimize irrigation
+                        policies for tomato cultivation in Marvdasht, Iran. Designed a custom Gym-like environment,
+                        integrated DSSAT-generated datasets, and conducted comparative analysis between discrete-
+                        and continuous-action RL models.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Deep RL</span>
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">Agriculture</span>
+                        <span class="project-tag">Research</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">🧬</div>
+                    <div class="project-header">
+                        <h3>RNA Pairing Pattern Recognition Model</h3>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <p class="project-description">
+                        Builds upon the KH-99 model and introduces a novel Gap-Bracket CYK parsing algorithm
+                        to improve prediction accuracy, especially for complex motifs like pseudoknots.
+                        Preliminary version presented at the CBRC Journal Club.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Bioinformatics</span>
+                        <span class="project-tag">Algorithm Design</span>
+                        <span class="project-tag">RNA Structure</span>
+                        <span class="project-tag">Python</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">🏆</div>
+                    <div class="project-header">
+                        <h3>Gold-Binding Peptides Classifier</h3>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <p class="project-description">
+                        Developed, evaluated, and interpreted machine learning models for classifying gold-binding
+                        peptides. Applied various ML algorithms and feature engineering techniques to achieve
+                        high classification accuracy.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Machine Learning</span>
+                        <span class="project-tag">BioPython</span>
+                        <span class="project-tag">Classification</span>
+                        <span class="project-tag">Research</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">🖼️</div>
+                    <div class="project-header">
+                        <h3>Image Labeling Studio</h3>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <p class="project-description">
+                        Cross-platform desktop application built with Electron and TailwindCSS for efficient
+                        image management, annotation, cropping, and segmentation, targeting machine learning datasets.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Electron</span>
+                        <span class="project-tag">TailwindCSS</span>
+                        <span class="project-tag">Desktop App</span>
+                        <span class="project-tag">ML Tools</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">🔄</div>
+                    <div class="project-header">
+                        <h3>Orthogonal Gradient Descent for Continual Learning</h3>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <p class="project-description">
+                        Implemented and analyzed Orthogonal Gradient Descent (OGD) to mitigate catastrophic
+                        forgetting in deep neural networks during continual learning scenarios.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Deep Learning</span>
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">Continual Learning</span>
+                        <span class="project-tag">Research</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-icon">📅</div>
+                    <div class="project-header">
+                        <h3>My Planner: Full-Stack Productivity Tool</h3>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <p class="project-description">
+                        Full-stack productivity tool for organizing daily tasks, reminders, and expenses,
+                        built with React (component-based) frontend and Express.js/MongoDB backend.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Express.js</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Full-Stack</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-intro">
+                <h3>Let's Connect!</h3>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                Feel free to reach out through any of the following channels:</p>
+            </div>
+
+            <div class="contact-grid">
+                <a href="mailto:mr-ahmadi2004@outlook.com" class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>mr-ahmadi2004<br/>@outlook.com</p>
+                </a>
+
+                <a href="https://github.com/Mr-Ahmadi" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h4>GitHub</h4>
+                    <p>@Mr-Ahmadi</p>
+                </a>
+
+                <a href="https://linkedin.com/in/ali-ahmadi-esfidi" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h4>LinkedIn</h4>
+                    <p>Ali Ahmadi Esfidi</p>
+                </a>
+
+                <a href="tel:+989044478539" class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h4>Phone</h4>
+                    <p>+98 904 4478 539</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Ali Ahmadi Esfidi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
