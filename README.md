@@ -158,7 +158,7 @@ Edit CSS variables in `styles.css`:
 
 ## 📧 Contact
 
-- **Email**: <mr-ahmadi2004@outlook.com>
+- **Email**: <aliahmadiesfidi@outlook.com>
 - **GitHub**: [@Mr-Ahmadi](https://github.com/Mr-Ahmadi)
 - **LinkedIn**: [Ali Ahmadi Esfidi](https://linkedin.com/in/ali-ahmadi-esfidi)
 - **Phone**: +98 904 4478 539
