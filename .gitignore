@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Dependencies
+node_modules/
+admin/node_modules/
+
+# Build output
+admin/dist/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
