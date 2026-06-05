@@ -299,6 +299,7 @@ body {
     color: var(--text-light);
     margin-bottom: 2rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .cta-buttons {
@@ -545,7 +546,6 @@ body {
 }
 
 .cv-card .btn:hover {
-    color: white;
     background: var(--bg-color);
     transform: translateY(-3px);
 }
@@ -943,6 +943,7 @@ body {
 
     .profile-sketch {
         order: -1;
+        margin-top: 1rem;
     }
 
     .cta-buttons {
@@ -961,6 +962,9 @@ body {
         font-size: 1.2rem;
     }
 
+    .sketch-arrow {
+        display: none;
+    }
 }
 
 /* Responsive Design - Mobile */
@@ -1013,7 +1017,7 @@ body {
     }
 
     .sketch-arrow {
-        bottom: 20px;
+        padding: 16px 0 24px;
     }
 
     .cv-card {
@@ -1171,6 +1175,7 @@ body {
     line-height: 1.8;
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .modal-body .project-tags {

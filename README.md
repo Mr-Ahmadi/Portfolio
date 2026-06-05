@@ -1,47 +1,51 @@
 # Ali Ahmadi Esfidi - Portfolio Website
 
-A modern, responsive personal portfolio website showcasing my academic journey, research experience, projects, and professional achievements in Computer Science, Machine Learning, and Computational Biology.
+A modern, responsive personal portfolio website showcasing my academic journey, research experience, projects, and professional achievements in Computer Science, Machine Learning, and Computational Biology — with PWA support and an admin panel for content management.
 
 ![Portfolio Preview](assets/preview.png)
 
 ## 🌟 Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
-- **Smooth Animations**: Intersection Observer API for elegant scroll-based animations
-- **Modern UI/UX**: Clean, professional design with custom color scheme and typography
-- **Interactive Navigation**: Smooth scrolling navigation with active section highlighting
-- **Mobile-Friendly**: Optimized hamburger menu for mobile devices
-- **Performance Optimized**: Lazy loading images and debounced scroll events
-- **Accessibility**: Focus management and keyboard navigation support
+- **Responsive Design**: Fully responsive layout across desktop, tablet, and mobile
+- **PWA Support**: Installable as a standalone app with offline caching via service worker
+- **Self-Hosted Fonts**: Inter and Space Grotesk variable fonts served locally (no external CDN)
+- **Smooth Animations**: Intersection Observer API for scroll-based fade-in animations
+- **Glass Navbar**: Backdrop-filter blur navigation bar
+- **Interactive Navigation**: Smooth scrolling with active section highlighting
+- **Mobile-Friendly**: Optimized hamburger menu with click-outside-to-close
+- **Accessibility**: Keyboard navigation, focus-visible indicators, reduced motion support
+- **Back to Top**: Floating button appears on scroll
+- **Custom Scrollbar**: Styled scrollbar matching the accent color
 
 ## 🎨 Design Highlights
 
-- **Custom Color Palette**: Professional color scheme with accent colors (#a94442)
-- **Typography**: Combination of 'Permanent Marker', 'Caveat', and 'Inter' fonts for visual hierarchy
+- **Custom Color Palette**: Professional scheme with accent (#a94442), auto-adapting for dark mode
+- **Typography**: Inter (body) and Space Grotesk (headings) self-hosted variable fonts
 - **Sketch-Style Elements**: Hand-drawn aesthetic with decorative borders and highlights
-- **Grid-Based Layout**: Modern CSS Grid and Flexbox for responsive layouts
+- **Grid & Flexbox**: Modern CSS Grid and Flexbox for responsive layouts
 
 ## 📋 Sections
 
 1. **Home**: Introduction with profile image and call-to-action buttons
-2. **About**: Personal information, education, skills, technologies, and coursework
+2. **About**: Fields of interest, skills & technologies, CV download
 3. **Experience**: Research positions, teaching assistantships, certificates, and publications
-4. **Projects**: Showcase of key projects with descriptions and GitHub links
+4. **Projects**: Showcase of key projects with descriptions, tags, and GitHub links (with detail modal)
 5. **Contact**: Contact information and social media links
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup structure
-- **CSS3**: Modern styling with CSS variables, Grid, and Flexbox
-- **JavaScript (ES6+)**: Interactive features and animations
-- **Google Fonts**: Custom typography (Inter, Caveat, Permanent Marker)
+- **HTML5**: Semantic markup with PWA meta tags
+- **CSS3**: Custom properties, Grid, Flexbox, backdrop-filter, dark mode queries
+- **JavaScript (ES6+)**: Intersection Observer, dynamic rendering, service worker registration
+- **Fonts**: Inter & Space Grotesk (self-hosted WOFF2 variable fonts)
+- **Icons**: Font Awesome 6.4.0
+- **Admin Panel**: React + Vite (separate app for content management)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- Basic knowledge of HTML/CSS/JS for customization
 
 ### Installation
 
@@ -56,93 +60,74 @@ cd portfolio
 
 ```bash
 open index.html
-# or
-start index.html
-# or simply double-click the file
 ```
 
 ### File Structure
 
+```
 Portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # Stylesheet
-├── script.js           # JavaScript functionality
+├── index.html              # Main HTML file
+├── styles.css              # Stylesheet
+├── script.js               # JavaScript functionality
+├── sw.js                   # Service worker for PWA offline caching
+├── manifest.json           # PWA manifest
+├── fonts/
+│   ├── fonts.css           # Self-hosted @font-face declarations
+│   ├── Inter.woff2         # Inter variable font
+│   └── SpaceGrotesk.woff2  # Space Grotesk variable font
+├── icons/
+│   ├── icon-192x192.png    # PWA icon
+│   └── icon-512x512.png    # PWA icon
 ├── assets/
-│   ├── a.png          # Logo image
-│   └── Curriculum_Vitae.pdf  # CV document
-└── README.md          # This file
-
+│   ├── a.png               # Logo / favicon
+│   ├── preview.png         # Preview image for README
+│   └── Curriculum_Vitae.pdf
+├── admin/                  # React admin panel (separate app)
+└── README.md
+```
 
 ## ✨ Key Features Implementation
 
-### Smooth Scrolling
+### Dark Mode
+- Auto-detected via `prefers-color-scheme: dark`
+- Adjusted backgrounds, text, borders, and accent colors
+- Smooth color transitions
 
-- Custom smooth scroll behavior for navigation links
-- Automatic adjustment for fixed navbar height
+### PWA
+- `manifest.json` for installable app experience
+- `sw.js` service worker precaches all assets for offline use
+- Icons at 192x192 and 512x512
 
-### Active Navigation Highlighting
+### Self-Hosted Fonts
+- Variable fonts (single file covers all weights)
+- `font-display: swap` for optimal loading
+- No external CDN dependency — works fully offline
 
+### Smooth Scrolling & Nav Highlighting
+- Custom smooth scroll for navigation links
 - Real-time active section detection while scrolling
-- Visual feedback for current page section
 
-### Mobile Navigation
-
-- Responsive hamburger menu for mobile devices
-- Click-outside-to-close functionality
-- Scroll prevention when menu is open
-
-### Intersection Observer Animations
-
-- Fade-in animations for cards and timeline items
-- Performance-optimized with threshold settings
-
-### Accessibility Features
-
-- Keyboard navigation support
-- Focus indicators for interactive elements
-- Semantic HTML structure
-- External links security (`noopener noreferrer`)
+### Project Detail Modal
+- Click any project card to open a full detail modal
+- Keyboard (Escape) support, click-outside-to-close
+- Full project description, tags, and GitHub link
 
 ## 🎯 Customization Guide
 
 ### Changing Colors
 
-Edit CSS variables in `styles.css`:
-
-```css
-:root {
-    --primary-color: #2d3748;
-    --accent-color: #a94442;
-    /* Modify other color variables */
-}
-```
-
-### Adding New Sections
-
-1. Add section HTML in `index.html`
-2. Add navigation link in navbar
-3. Style the section in `styles.css`
-4. Update JavaScript arrays if needed
+Edit CSS variables in `styles.css` — dark mode overrides are in the `@media (prefers-color-scheme: dark)` block.
 
 ### Modifying Content
 
-- Update personal information in the HTML
-- Replace project details and links
-- Update CV file in assets folder
+Content is managed via the `PORTFOLIO_JSON` object in `script.js`, or through the admin panel at `admin/`.
 
 ## 📱 Responsive Breakpoints
 
-- **Desktop**: > 768px
-- **Tablet/Mobile**: ≤ 768px
-- Uses `clamp()` for fluid typography scaling
-
-## 🔧 JavaScript Features
-
-- Debounced scroll events for performance
-- Dynamic year update in footer
-- Lazy loading preparation for images
-- Console easter egg for developers
-- Loading animations on page load
+- **Desktop**: > 968px
+- **Tablet**: 768px – 968px
+- **Mobile**: < 768px
+- Uses `clamp()` for fluid typography and sizing
 
 ## 📄 Browser Support
 

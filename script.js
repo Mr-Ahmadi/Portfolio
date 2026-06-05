@@ -290,7 +290,7 @@ const PORTFOLIO_JSON = {
   "hero": {
     "name": "Ali Ahmadi Esfidi",
     "tagline": "AI Researcher & Web/Software Developer 🚀",
-    "bio": "Final-year B.Sc. Computer Science student at Amirkabir University of Technology, with experience as an AI researcher and developer focused on deep reinforcement learning and machine learning for real-world decision-making systems. Experienced in applied projects across infrastructure monitoring, agri- culture, and computational biology. Skilled in developing practical, data-driven AI solutions from modeling to deployment, with a strong background in software and web development that supports end-to-end system building. Motivated by problems where intelligent automation creates measurable real-world impact.",
+    "bio": "Final-year B.Sc. Computer Science student at Amirkabir University of Technology, with experience as an AI researcher and developer focused on deep reinforcement learning and machine learning for real-world decision-making systems. Experienced in applied projects across infrastructure monitoring, agriculture, and computational biology. Skilled in developing practical, data-driven AI solutions from modeling to deployment, with a strong background in software and web development that supports end-to-end system building. Motivated by problems where intelligent automation creates measurable real-world impact.",
     "avatar": "👨‍💻",
     "ctaPrimary": {
       "text": "Get In Touch",
@@ -407,25 +407,33 @@ const PORTFOLIO_JSON = {
         "title": "🧬 Bioinformatics Internship Program",
         "date": "Nov 2025",
         "institution": "🏢 Biocan",
-        "detail": "👨‍🏫 Scientific Secretary: Dr. Z. Salehi • Course Director: Dr. K. Kavousi"
+        "detail": "👨‍🏫 Scientific Secretary: Dr. Z. Salehi • Course Director: Dr. K. Kavousi",
+        "linkLabel": "View Certificate",
+        "link": "https://drive.google.com/file/d/1Sq-hCLrasHlw_BRVucsxccK2731pjX_V/view"
       },
       {
         "title": "🧬 Introduction to Bioinformatics",
         "date": "Feb 2025 - Jul 2025",
         "institution": "🏢 BioCan",
-        "detail": "👨‍🏫 Scientific Chair: Dr. K. Kavousi"
+        "detail": "👨‍🏫 Scientific Chair: Dr. K. Kavousi",
+        "linkLabel": "View Certificate",
+        "link": "https://drive.google.com/file/d/1wQgazces8McKTpEEtXOt706EJZTsZOQ0/view"
       },
       {
         "title": "📜 Scrum Foundations Course",
         "date": "Dec 2024",
         "institution": "🏢 Ultima Training Tech Co.",
-        "detail": "👨‍🏫 Instructor: Josef Balahan"
+        "detail": "👨‍🏫 Instructor: Josef Balahan",
+        "linkLabel": "View Certificate",
+        "link": "https://drive.google.com/file/d/1NJ5aD03rufClRxjFiiH41jTgAVAnIFnK/view"
       },
       {
         "title": "🧬 New Methods of Cancer Treatment",
         "date": "Feb 2025",
         "institution": "🏢 Biocan",
-        "detail": "👨‍🏫 Head Of Webinar: Prof. Hamidieh"
+        "detail": "👨‍🏫 Head Of Webinar: Prof. Hamidieh",
+        "linkLabel": "View Certificate",
+        "link": "https://drive.google.com/file/d/1eHBc-JmUSyshqO7474QuWFH-MYajAq6b/view"
       }
     ],
     "publications": [
