@@ -451,7 +451,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🌉",
       "title": "Halley Project: Bridge Damage Diagnosis App",
-      "date": "2026",
+      "date": "Apr, 2025",
       "description": "A project launched by the NORC Lab, focused on developing an application for diagnosing bridge damage. Worked as a ReactJS and Express.js developer and contributed to the design and implementation of computer vision models for damage detection.",
       "tags": [
         "computer-vision",
@@ -465,7 +465,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "📡",
       "title": "MIS SWIPT",
-      "date": "2026",
+      "date": "Jun, 2026",
       "description": "Designed a deep reinforcement learning framework to optimize beamforming for Movable Intelligent Surface (MIS)-assisted SWIPT systems. Implemented DRL agents that jointly configure phase shifts and power splitting ratios to maximize energy harvesting while maintaining information decoding quality.",
       "tags": [
         "beamforming",
@@ -479,7 +479,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🔀",
       "title": "SwitchPair RL",
-      "date": "2026",
+      "date": "Oct, 2025",
       "description": "Built a hybrid deep reinforcement learning and simulated annealing solver for optimal rule placement in Software-Defined Networks. Designed a custom RL environment modeling OpenFlow switch constraints to minimize rule conflicts while maximizing throughput. Achieved significant gains over greedy heuristics across multiple network topologies.",
       "tags": [
         "deep-reinforcement-learning",
@@ -493,7 +493,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🧪",
       "title": "Gold Binding Peptides",
-      "date": "2026",
+      "date": "Sep, 2025",
       "description": "Applied machine learning — including ensemble methods and protein embeddings — to classify and predict gold-binding affinity of peptide sequences. Compared regression and classification approaches across multiple featurization strategies for bio-nanotechnology applications.",
       "tags": [
         "classification",
@@ -508,8 +508,8 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🌾",
       "title": "Irrigation Optimization",
-      "date": "2026",
-      "description": "Built a deep reinforcement learning system using DDPG and PPO to optimize irrigation policies under variable climate conditions. Designed a custom Gym environment integrated with crop growth simulators, achieving measurable water savings without yield loss.",
+      "date": "Nov, 2025",
+      "description": "Built a deep reinforcement learning system using D3QN, A2C, DDPG and PPO to optimize irrigation policies under variable climate conditions. Designed a custom Gym environment integrated with crop growth simulators, achieving measurable water savings without yield loss.",
       "tags": [
         "deep-reinforcement-learning",
         "irrigation-control",
@@ -521,8 +521,8 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🧬",
       "title": "RNA Secondary Structure Prediction",
-      "date": "2026",
-      "description": "Developed a hybrid RNA secondary structure predictor combining Stochastic Context-Free Grammars with evolutionary models. Implemented the CYK algorithm for parse-tree inference, improving pseudoknot detection accuracy over traditional Nussinov-based approaches.",
+      "date": "Apr, 2024",
+      "description": "Developed a hybrid RNA secondary structure predictor that integrated Stochastic Context-Free Grammars (SCFGs) with evolutionary covariance models to improve pseudoknot detection. Implemented the CYK algorithm for efficient parse-tree inference across nested and crossing base-pair interactions. ",
       "tags": [
         "context-free-grammar",
         "cyk-algorithm",
@@ -535,8 +535,8 @@ const PORTFOLIO_JSON = {
     {
       "icon": "⚡",
       "title": "RL Job Scheduler",
-      "date": "2026",
-      "description": "Designed a two-stage hierarchical reinforcement learning scheduler for ML training jobs on shared clusters. The high-level agent allocates resources across queues while the low-level agent optimizes per-job execution order, reducing average job completion time by over 20% in simulation.",
+      "date": "Nov, 2025",
+      "description": "Designed a two-stage hierarchical reinforcement learning scheduler for ML training jobs on shared clusters. The high-level agent allocates resources across queues while the low-level agent optimizes per-job execution order, reducing average job completion time.",
       "tags": [
         "deep-reinforcement-learning",
         "hierarchical-rl",
@@ -549,7 +549,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🎬",
       "title": "Movie Recommender",
-      "date": "2026",
+      "date": "May, 2026",
       "description": "Built a hybrid movie recommendation engine combining ChromaDB-based semantic search with zero-shot classification for genre-aware suggestions. Wrapped in a Gradio UI, the system retrieves similar films from embeddings and classifies user preferences on the fly.",
       "tags": [
         "chromadb",
@@ -563,7 +563,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "💻",
       "title": "Tiny OS",
-      "date": "2026",
+      "date": "Feb, 2026",
       "description": "Built a minimal operating system from scratch targeting ARM64 with UEFI boot support. Implements interrupt handling, a simple memory allocator, and a basic ELF loader — demonstrating deep understanding of low-level systems programming.",
       "tags": [
         "arm64",
@@ -577,7 +577,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "📚",
       "title": "Gutenberg LM",
-      "date": "2026",
+      "date": "Jun, 2026",
       "description": "Implemented and compared three language model architectures — Word2Vec embeddings, stacked LSTMs, and Transformer encoders — trained on the Gutenberg corpus. Evaluated perplexity and downstream performance, demonstrating the progression from static to contextual representations.",
       "tags": [
         "language-model",
@@ -591,7 +591,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🎥",
       "title": "Code Cast",
-      "date": "2026",
+      "date": "Sep, 2023",
       "description": "Built a keystroke recorder and replay engine for code typing sessions, capturing every edit, selection, and deletion. Useful for code reviews, tutorials, and debugging demos where watching the edit history tells the full story.",
       "tags": [
         "code-editor",
@@ -604,7 +604,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "⚖️",
       "title": "Comparison Between CYK And Earley Algorithms",
-      "date": "2026",
+      "date": "Dec, 2024",
       "description": "Conducted a rigorous theoretical and empirical comparison of CYK and Earley parsing algorithms across Chomsky-normal-form grammars. Analyzed time complexity, parsing ambiguity handling, and practical performance trade-offs with benchmark grammars.",
       "tags": [
         "chomsky",
@@ -618,7 +618,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🧠",
       "title": "Orthogonal Gradient Descent",
-      "date": "2026",
+      "date": "May, 2025",
       "description": "Implemented Orthogonal Gradient Descent (OGD) for continual learning, projecting gradients orthogonal to previously learned tasks to prevent catastrophic forgetting. Evaluated on standard continual learning benchmarks against EWC, SI, and replay-based baselines.",
       "tags": [
         "continual-learning",
@@ -631,7 +631,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🥊",
       "title": "Stick Combat",
-      "date": "2026",
+      "date": "Apr, 2026",
       "description": "Created a physics-based 2D fighting game with stick-figure characters using JavaScript and Canvas. Supports local multiplayer with real-time collision detection, combo mechanics, and ragdoll physics for responsive, arcade-style gameplay.",
       "tags": [
         "2d-game",
@@ -644,7 +644,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🔒",
       "title": "V2Ray VPN",
-      "date": "2026",
+      "date": "Feb, 2026",
       "description": "Built a cross-platform desktop V2Ray client using Electron and React with a visual proxy management dashboard. Features real-time connection status, protocol switching (VMess, Shadowsocks, SOCKS), and per-app routing rules.",
       "tags": [
         "proxy-management",
@@ -657,7 +657,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "📺",
       "title": "Beamer Presentation",
-      "date": "2026",
+      "date": "May, 2026",
       "description": "Created a wireless presentation system for Apple devices using Multipeer Connectivity for peer-to-peer screen mirroring. Enables remote slide control and real-time presentation streaming without external hardware or network infrastructure.",
       "tags": [
         "beamer-slides",
@@ -670,8 +670,8 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🔬",
       "title": "AminoAcid Repeats",
-      "date": "2026",
-      "description": "Built a computational pipeline to detect and analyze amino acid repeat patterns across protein sequences. Applied statistical models to characterize repeat regions linked to structural disorders and aggregation-prone domains.",
+      "date": "Jul, 2025",
+      "description": "This project contains the presentation slides and Python scripts related to the analysis and detection of Amino Acid Repeats in protein sequences. The project explores various computational methodologies for identifying these repeats and discusses their biological significance and implications.",
       "tags": [
         "amino-acids",
         "repeated-elements"
@@ -682,7 +682,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🏷️",
       "title": "Image Labeling Studio",
-      "date": "2026",
+      "date": "Aug, 2025",
       "description": "Built a lightweight desktop image labeling tool for computer vision pipelines, supporting bounding box and polygon annotations. Exports in COCO and YOLO formats, streamlining the dataset preparation workflow for object detection models.",
       "tags": [
         "annotation-tool",
@@ -695,7 +695,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "📦",
       "title": "7 Zip",
-      "date": "2026",
+      "date": "Jun, 2026",
       "description": "Developed a native macOS archive manager with a Swift-native UI supporting 7z, zip, tar, and gzip formats. Integrates with the macOS file system for drag-and-drop compression and extraction, providing a polished alternative to command-line tools.",
       "tags": [
         "7-zip",
@@ -707,7 +707,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🎵",
       "title": "Music Player",
-      "date": "2026",
+      "date": "Sep, 2025",
       "description": "Built a native iOS music player with AVFoundation, featuring real-time analytics on listening habits, skip rates, and play counts. Implemented local audio playback with a Swift-based architecture optimized for performance and battery efficiency.",
       "tags": [
         "avfoundation",
@@ -720,7 +720,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🎯",
       "title": "Random Guess",
-      "date": "2026",
+      "date": "Jan, 2026",
       "description": "Developed a fast-paced local multiplayer word-guessing party game in TypeScript, where players race against the clock to guess words from cryptic clues. Features real-time score tracking, multiple rounds, and support for custom word packs.",
       "tags": [
         "local-multiplayer-game",
@@ -733,7 +733,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "✅",
       "title": "SAT Solver",
-      "date": "2026",
+      "date": "Jan, 2024",
       "description": "Implemented DPLL and CDCL SAT solver algorithms from scratch in Python, with clause learning, VSIDS heuristic, and two-watched-literals optimization. Benchmarked on SATLIB instances, demonstrating the performance gap between naive backtracking and modern CDCL.",
       "tags": [
         "cdcl-algorithm",
@@ -746,7 +746,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🖼️",
       "title": "Gallery Gate",
-      "date": "2026",
+      "date": "Mar, 2025",
       "description": "Developed a full-stack image gallery management app with React front-end and Express.js/MongoDB back-end. Supports batch uploads, album organization, tag-based search, and role-based access control for shared photo collections.",
       "tags": [
         "expressjs",
@@ -760,7 +760,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "📝",
       "title": "Note Picker",
-      "date": "2026",
+      "date": "Jun, 2023",
       "description": "Built a full-stack video annotation app with React and Express.js, enabling timestamped note-taking synced to video playback. Notes persist in MongoDB with real-time search and filtering by timestamp, making it easy to revisit key moments in lectures or meetings.",
       "tags": [
         "expressjs",
@@ -773,7 +773,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "📅",
       "title": "My Planner",
-      "date": "2026",
+      "date": "Jun, 2023",
       "description": "Built a simple daily planner app with React and Express.js featuring task scheduling, priority tagging, and persistent storage via MongoDB. Clean, minimal UI optimized for quick entry and daily overview.",
       "tags": [
         "expressjs",
