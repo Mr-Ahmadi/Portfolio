@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website showcasing my academic journey, research experience, projects, and professional achievements in Computer Science, Machine Learning, and Computational Biology — with PWA support and an admin panel for content management.
 
-![Portfolio Preview](assets/preview.png)
+![Portfolio Preview](Screenshot.png)
 
 ## 🌟 Features
 
