@@ -365,7 +365,7 @@ const PORTFOLIO_JSON = {
     "research": [
       {
         "title": "🔬 Research Assistant  - NORC Lab",
-        "date": "Mar 2025 - Present",
+        "date": "Jan 2025 - Present",
         "institution": "🎓 Amirkabir University of Technology",
         "detail": "👨‍🏫 Supervisor: Dr. Ghatee"
       },
@@ -493,7 +493,7 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🧪",
       "title": "Gold Binding Peptides",
-      "date": "Sep, 2025",
+      "date": "May, 2025",
       "description": "Applied machine learning — including ensemble methods and protein embeddings — to classify and predict gold-binding affinity of peptide sequences. Compared regression and classification approaches across multiple featurization strategies for bio-nanotechnology applications.",
       "tags": [
         "classification",
