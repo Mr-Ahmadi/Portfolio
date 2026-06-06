@@ -26,3 +26,9 @@ npm-debug.log*
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Assets - only track specific files
+assets/*
+!assets/a.png
+!assets/Ali Ahmadi Esfidi.tex
+!assets/Ali Ahmadi Esfidi.pdf

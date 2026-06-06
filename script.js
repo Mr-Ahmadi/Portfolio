@@ -358,7 +358,7 @@ const PORTFOLIO_JSON = {
         "MongoDB"
       ]
     },
-    "cvFile": "assets/Curriculum_Vitae.pdf",
+    "cvFile": "assets/Ali Ahmadi Esfidi.pdf",
     "cvDescription": "Get a complete overview of my experience, education, and skills."
   },
   "experience": {
