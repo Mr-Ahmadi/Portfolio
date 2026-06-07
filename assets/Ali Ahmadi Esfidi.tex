@@ -1,6 +1,6 @@
 \documentclass[10pt, a4paper]{article}
 
-\usepackage[top=1.5cm, bottom=1.5cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage[top=1.3cm, bottom=1.3cm, left=1.3cm, right=1.3cm]{geometry}
 \usepackage{xcolor}
 \usepackage{fontawesome5}
 \usepackage{titlesec}
@@ -125,6 +125,8 @@
         \faGithub\;\href{https://github.com/Mr-Ahmadi}{Mr-Ahmadi}
         \quad\textcolor{dotcol}{|}\quad
         \faLinkedin\;\href{https://linkedin.com/in/ali-ahmadi-esfidi/}{Ali Ahmadi Esfidi}
+        \quad\textcolor{dotcol}{|}\quad
+        \faGlobe\;\href{https://mr-ahmadi.github.io/Portfolio/}{Portfolio}
     }
 \end{center}
 \vspace{2pt}
@@ -247,7 +249,9 @@ Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir Univers
 % ══════════════════════════════════════════════════════════
 %  PROJECTS
 % ══════════════════════════════════════════════════════════
-\section{Selected Projects}
+{\large\bfseries\color{darkgray} Selected Projects}\hfill%
+{\small\color{accent}\faGlobe\;\href{https://mr-ahmadi.github.io/Portfolio/#projects}{See more}}%
+\vspace{1pt}{\color{rulecol}\hrule height 1.5pt}\vspace{4pt}
 
 \cvprojectnolink
 {DRL-Based Beamforming Optimization for Movable Intelligent Surfaces}%
@@ -266,7 +270,7 @@ Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir Univers
           {https://github.com/Mr-Ahmadi/RL-Job-Scheduler}{Aug 2025 -- Oct 2025}
 \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
     \cvbullet {\color{medgray}
-        Developed a two-stage PPO system for scheduling ML jobs on multi-server accelerator clusters using the Gavel dataset for realistic job scheduling.}
+        Developed a two-stage hierarchical PPO system for scheduling ML jobs on multi-server accelerator clusters using the Gavel dataset, reducing average job completion time.}
     \cvbullet {\color{medgray}
         \textit{Stack:}\;
         \tstack{PyTorch, Stable-Baselines3, Pandas}}
