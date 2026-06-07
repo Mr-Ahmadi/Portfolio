@@ -210,12 +210,20 @@ function renderPage(data) {
 
   // About - Skills
   const langTags = document.getElementById('langTags')
-  const techTags = document.getElementById('techTags')
+  const frameworkTags = document.getElementById('frameworkTags')
+  const dsTags = document.getElementById('dsTags')
+  const platformTags = document.getElementById('platformTags')
   if (langTags && data.about?.skills?.languages) {
     langTags.innerHTML = data.about.skills.languages.map(l => `<span class="skill-tag">${l}</span>`).join('')
   }
-  if (techTags && data.about?.skills?.technologies) {
-    techTags.innerHTML = data.about.skills.technologies.map(t => `<span class="skill-tag">${t}</span>`).join('')
+  if (frameworkTags && data.about?.skills?.frameworks) {
+    frameworkTags.innerHTML = data.about.skills.frameworks.map(f => `<span class="skill-tag">${f}</span>`).join('')
+  }
+  if (dsTags && data.about?.skills?.dataScience) {
+    dsTags.innerHTML = data.about.skills.dataScience.map(d => `<span class="skill-tag">${d}</span>`).join('')
+  }
+  if (platformTags && data.about?.skills?.platforms) {
+    platformTags.innerHTML = data.about.skills.platforms.map(p => `<span class="skill-tag">${p}</span>`).join('')
   }
 
   // CV
@@ -338,24 +346,37 @@ const PORTFOLIO_JSON = {
     ],
     "skills": {
       "languages": [
+        "Python",
         "JavaScript",
         "TypeScript",
-        "Python",
-        "C/C++",
+        "R",
         "Java",
-        "C#",
-        "SQL",
+        "C++",
         "Swift"
       ],
-      "technologies": [
-        "NodeJS",
-        "ReactJS",
-        "PyTorch",
-        "BioPython",
-        "Git",
-        "Docker",
+      "frameworks": [
+        "React",
+        "Node.js",
         "Express.js",
-        "MongoDB"
+        "Django",
+        "Electron"
+      ],
+      "dataScience": [
+        "PyTorch",
+        "TensorFlow",
+        "Pandas",
+        "Scikit-learn",
+        "NumPy",
+        "OpenCV",
+        "LangChain"
+      ],
+      "platforms": [
+        "Docker",
+        "Git",
+        "GitHub",
+        "MongoDB",
+        "PostgreSQL",
+        "Hugging Face"
       ]
     },
     "cvFile": "assets/Ali Ahmadi Esfidi.pdf",

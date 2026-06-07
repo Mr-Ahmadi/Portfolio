@@ -151,8 +151,16 @@ function AboutEditor({ data, updateData, showToast }) {
             <TagInput tags={about.skills.languages} onChange={val => updateSkills('languages', val)} placeholder="Add language..." />
           </div>
           <div className="form-group">
-            <label className="form-label">Technologies & Tools</label>
-            <TagInput tags={about.skills.technologies} onChange={val => updateSkills('technologies', val)} placeholder="Add technology..." />
+            <label className="form-label">Frameworks</label>
+            <TagInput tags={about.skills.frameworks} onChange={val => updateSkills('frameworks', val)} placeholder="Add framework..." />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Data Science / ML</label>
+            <TagInput tags={about.skills.dataScience} onChange={val => updateSkills('dataScience', val)} placeholder="Add tool..." />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Platforms & Tools</label>
+            <TagInput tags={about.skills.platforms} onChange={val => updateSkills('platforms', val)} placeholder="Add platform..." />
           </div>
         </div>
       )}
