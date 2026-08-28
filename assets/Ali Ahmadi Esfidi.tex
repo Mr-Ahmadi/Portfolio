@@ -1,4 +1,4 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
 \usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
 \usepackage{xcolor}
@@ -12,6 +12,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{pgffor}
+\usepackage{multicol}
 
 % ─── COLORS ──────────────────────────────────────────────────────────────────
 \definecolor{accent}{HTML}{a94442}
@@ -22,23 +23,25 @@
 \definecolor{rulecol}{HTML}{c95f5d}
 \definecolor{dotcol}{HTML}{d48786}
 
-% ─── HYPERLINKS ───────────────────────────────────────────────────────────────
+% ─── HYPERLINKS ──────────────────────────────────────────────────────────────
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
 
 % ─── SPACING ─────────────────────────────────────────────────────────────────
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \pagestyle{empty}
+\raggedbottom
+\emergencystretch=3em  % help avoid overfull boxes
 
-% ─── SECTION STYLE ───────────────────────────────────────────────────────────
+% ─── SECTION STYLE ──────────────────────────────────────────────────────────
 \titleformat{\section}
     {\large\bfseries\color{darkgray}}
     {}{0em}{}
-    [\vspace{1pt}{\color{rulecol}\hrule height 1.5pt}\vspace{4pt}]
-\titlespacing{\section}{0pt}{12pt}{4pt}
+    [\vspace{1pt}{\color{rulecol}\hrule height 1.5pt}\vspace{2pt}]
+\titlespacing{\section}{0pt}{8pt}{2pt}
 
-% ─── TECH LIST ───────────────────────────────────────────────────────────────
-\newcommand{\tdot}{{\color{dotcol}\,\textbullet\,}}
+% ─── TECH LIST ──────────────────────────────────────────────────────────────
+\newcommand{\tdot}{{\color{dotcol}\,\textbullet\,\allowbreak}}
 
 \newcommand{\techlist}[1]{%
     {\small\color{accent}\texttt{#1}}%
@@ -57,7 +60,7 @@
 
 % ─── ENTRY HEADER ────────────────────────────────────────────────────────────
 \newcommand{\cventry}[4]{%
-    \vspace{4pt}
+    \vspace{2pt}
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
         \textbf{\color{darkgray}#1}
         \textcolor{lightgray}{\small\,\faChevronRight\,}
@@ -66,34 +69,32 @@
         \multicolumn{2}{@{}l@{}}{%
             \color{lightgray}\small\faMapMarker*\;\,#4}
     \end{tabularx}
-    \vspace{2pt}
+    \vspace{-1pt} % negative to pull bullet list closer
 }
 
 % ─── PROJECT HEADER ──────────────────────────────────────────────────────────
 \newcommand{\cvproject}[3]{%
-    \vspace{4pt}
+    \vspace{2pt}
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
         \textbf{\color{darkgray}#1}\;\,
         \href{#2}{\small\color{lightgray}\faGithub} &
         {\small\color{lightgray}\faCalendar[regular]\;\,#3}
     \end{tabularx}
-    \vspace{2pt}
+    \vspace{-1pt}
 }
 
-% ─── PROJECT HEADER WITHOUT LINK ─────────────────────────────────────────────
 \newcommand{\cvprojectnolink}[2]{%
-    \vspace{4pt}
+    \vspace{2pt}
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
         \textbf{\color{darkgray}#1} &
         {\small\color{lightgray}\faCalendar[regular]\;\,#2}
     \end{tabularx}
-    \vspace{2pt}
+    \vspace{-1pt}
 }
 
 % ─── CERT / VOLUNTEER ENTRY ──────────────────────────────────────────────────
-% #1 = date  #2 = title  #3 = org  #4 = icon  #5 = detail line
 \newcommand{\cvmisc}[5]{%
-    \vspace{4pt}
+    \vspace{2pt}
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
         \textbf{\color{darkgray}#2}
         \textcolor{lightgray}{\small\,\faChevronRight\,}
@@ -102,7 +103,7 @@
     \end{tabularx}
     \vspace{1pt}
     {\small\color{lightgray}\quad #5}%
-    \vspace{2pt}
+    \vspace{4pt}
 }
 
 % ─── BULLET ──────────────────────────────────────────────────────────────────
@@ -116,11 +117,9 @@
 % ══════════════════════════════════════════════════════════
 \begin{center}
     {\huge\bfseries\color{darkgray} Ali Ahmadi Esfidi}\\[4pt]
-    {\color{accent} AI Researcher \& Web/Software Developer}\\[7pt]
+    {\color{accent} AI Researcher \& Developer}\\[7pt]
     {\small\color{medgray}
         \faEnvelope\;\href{mailto:aliahmadiesfidi@outlook.com}{aliahmadiesfidi@outlook.com}
-        \quad\textcolor{dotcol}{|}\quad
-        \faPhone\;+98\,(904)\,447-8539
         \quad\textcolor{dotcol}{|}\quad
         \faGithub\;\href{https://github.com/Mr-Ahmadi}{Mr-Ahmadi}
         \quad\textcolor{dotcol}{|}\quad
@@ -131,19 +130,12 @@
 \end{center}
 \vspace{2pt}
 {\color{rulecol}\hrule height 2pt}
-\vspace{4pt}
-
-% ══════════════════════════════════════════════════════════
-%  ABOUT
-% ══════════════════════════════════════════════════════════
-\section{About}
-Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir University of Technology}, with experience as an \textbf{AI researcher and developer} focused on \textbf{deep reinforcement learning} and \textbf{machine learning} for real-world decision-making systems. Experienced in applied projects across \textbf{infrastructure monitoring}, \textbf{agriculture}, and \textbf{computational biology}. Skilled in developing practical, data-driven AI solutions from modeling to deployment, with a strong background in \textbf{software} and \textbf{web development} that supports end-to-end system building.
+\vspace{2pt}
 
 % ══════════════════════════════════════════════════════════
 %  EDUCATION
 % ══════════════════════════════════════════════════════════
 \section{Education}
-
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
     \textbf{\color{darkgray}B.Sc.\ Computer Science}
     \textcolor{lightgray}{\small\,\faChevronRight\,}
@@ -151,7 +143,7 @@ Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir Univers
     {\small\color{lightgray}\faCalendar[regular]\;\,Sep 2022 -- Present}
 \end{tabularx}
 \begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=1pt]
-    \cvbullet {\color{medgray} Location: Tehran, Iran {\color{accent}\textbf{|}} Field of study: Computer Science {\color{accent}\textbf{|}} GPA: 18.81/20 {\color{accent}\textbf{|}} Top 20\%}
+    \cvbullet {\color{medgray} Location: Tehran, Iran {\color{accent}\textbf{|}} Field of study: Computer Science {\color{accent}\textbf{|}} GPA: 18.90/20 {\color{accent}\textbf{|}} Top 20\%}
 \end{itemize}
 
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
@@ -164,137 +156,154 @@ Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir Univers
     \cvbullet {\color{medgray} Location: Qom, Iran {\color{accent}\textbf{|}} Field of study: Mathematics \& Physics {\color{accent}\textbf{|}} GPA: 18.42/20}
 \end{itemize}
 
+
+% ══════════════════════════════════════════════════════════
+%  RESEARCH INTERESTS
+% ══════════════════════════════════════════════════════════
+\section{Research Interests}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=1pt]
+    \cvbullet {\color{medgray} Deep Reinforcement Learning}
+    \cvbullet {\color{medgray} Machine Learning for Decision-Making Systems}
+    \cvbullet {\color{medgray} AI for Infrastructure Monitoring}
+    \cvbullet {\color{medgray} Optimization Methods for AI and Networking}
+    \cvbullet {\color{medgray} Computational Biology \& Bioinformatics}
+    \cvbullet {\color{medgray} Software-Defined Networks \& Resource Allocation}
+\end{itemize}
+\end{multicols}
+
 % ══════════════════════════════════════════════════════════
 %  EXPERIENCE
 % ══════════════════════════════════════════════════════════
-\section{Experience}
-
+\section{Experiences}
 \cventry{Research Assistant}{Supervisor: Prof.\ Ghatee}%
-        {Jan 2025 -- Present}{NORC Lab, Amirkabir University of Technology}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
-    \cvbullet {\color{medgray}
-        \textbf{Web Developer} and \textbf{AI Team Lead}, developing web systems and deep learning models for automated bridge
-        damage detection with the \textbf{Tehran Urban Planning and Research Center}.}
-    \cvbullet {\color{medgray}
-        Contributed to the master's thesis
-        \textit{``Damage Detection in Bridge Structures Using Compact Machine Learning Models''} 
-        by developing efficient deep-learning methods for structural health monitoring.}
-    \cvbullet {\color{medgray}
-        \textit{Stack:}\;
-        \tstack{PyTorch, OpenCV, ReactJS, NodeJS, PostgreSQL, Docker}}
+{Jan 2025 -- Present}{NORC Lab, Amirkabir University of Technology}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\cvbullet {\color{medgray}
+\textbf{Led} an AI team and \textbf{engineered} web systems and deep learning models for automated bridge damage detection in collaboration with the Tehran Urban Planning and Research Center.}
+\cvbullet {\color{medgray}
+\textbf{Gained hands-on experience} in developing efficient deep-learning pipelines for computer vision applications, focusing on model compactness and structural health monitoring.}
+\cvbullet {\color{medgray}
+\textit{Stack:};
+\tstack{PyTorch, OpenCV, ReactJS, NodeJS, PostgreSQL, Docker}}
 \end{itemize}
 
-\vspace{6pt}
+\vspace{4pt}
 
 \cventry{Research Assistant}{Supervisor: Prof.\ Khonsari}%
-        {Sep 2024 -- Present}{High Performance Networks Lab, Tehran University}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
-    \cvbullet {\color{medgray}
-        Collaborated on a \textbf{DRL-based agricultural irrigation optimization}
-        project using DSSAT-generated datasets; contributed to algorithm design
-        and core code implementation}
-    \cvbullet {\color{medgray}
-        Co-authored a \textbf{CSICC 2025} paper and contributed to the DeepIrrigo study (to be submitted to \textbf{Smart Agricultural Technology}), including refinement of methodology and analysis.}
-    \cvbullet {\color{medgray}
-        \textit{Stack:}\;
-        \tstack{PyTorch, TensorFlow, Pandas, NumPy}}
+{Sep 2024 -- Present}{High Performance Networks Lab, Tehran University}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\cvbullet {\color{medgray}
+\textbf{Developed} deep reinforcement learning systems for complex agricultural decision-making, focusing on reward engineering and policy optimization to balance multiple objectives.}
+\cvbullet {\color{medgray}
+\textbf{Acquired proficiency} in benchmarking reinforcement learning algorithms across discrete and continuous action spaces, and in utilizing simulation environments for training and evaluation.}
+\cvbullet {\color{medgray}
+\textit{Stack:};
+\tstack{PyTorch, TensorFlow, Pandas, NumPy}}
 \end{itemize}
 
-\vspace{6pt}
+\vspace{4pt}
 
-\cventry{Teaching Assistant}%
-        {2 Graduate and 3 Undergraduate Courses}%
+\cventry{Research Assistant}{Supervisor: Dr.\ Dolati}%
+{Sep 2025 -- Present}{Sharif University of Technology}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\cvbullet {\color{medgray}
+\textbf{Formulated} MDPs for switch pairing and collaborative rule caching, and designed simulation environments for joint scheduling-routing policies in programmable data planes.}
+\cvbullet {\color{medgray}
+\textbf{Implemented} optimization frameworks for in-network aggregation in distributed machine learning, focusing on ILP decomposition, flexible routing strategies, and scalable algorithmic design.}
+\cvbullet {\color{medgray}
+\textit{Stack:};
+\tstack{PyTorch, Numba, Pandas, NumPy}}
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Teaching Assistant}{Graduate \& Undergraduate Courses}%
         {Sep 2024 -- Present}{Amirkabir University of Technology \& Tehran University}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
     \cvbullet {\color{medgray}
         \textbf{Quantum Information Processing} (Master's, Prof.\ Khonsari) --- Sep 2025 -- Jan 2026}
     \cvbullet {\color{medgray}
         \textbf{Computational Data Mining} (Master's, Prof.\ Ghatee) --- Sep 2025 -- Jan 2026}
     \cvbullet {\color{medgray}
-        \textbf{Theory of Computation} (Dr.\ Didehvar) --- Sep 2024 -- Present}
+        \textbf{Theory of Computation} (Dr.\ Didehvar) --- Sep 2024 -- Jun 2026}
     \cvbullet {\color{medgray}
         \textbf{Introduction to Logic} (Dr.\ Didehvar) --- Sep 2025 -- Jan 2026}
     \cvbullet {\color{medgray}
         \textbf{Artificial Intelligence \& Workshop} (Prof.\ Ghatee, Dr.\ Yousefimehr) --- Sep 2024 -- Jan 2025}
 \end{itemize}
 
-
 % ══════════════════════════════════════════════════════════
 %  PUBLICATIONS
 % ══════════════════════════════════════════════════════════
 \section{Publications}
 
-\begin{itemize}[leftmargin=1.2em, itemsep=4pt, topsep=1pt]
-    \cvbullet {\color{medgray}
-        \textbf{Irrigation Optimization in Agricultural Fields Using Deep
-        Reinforcement Learning Approaches} \\
-        \textit{P.\ Heidari, \underline{A.\ Ahmadi Esfidi}, A.\ Mehrvarz,
-        E.\ Khodaei, A.\ Khonsari} \\
-        CSICC 2025 \quad DOI: \href{https://doi.org/10.1109/CSICC65765.2025.10967419}{\texttt{10.1109/CSICC65765.2025.10967419}}}
-    \cvbullet {\color{medgray}
-        \textbf{DeepIrrigo: Deep Reinforcement Learning for Continuous and
-        Discrete Action Irrigation Optimization --- A Case Study in Iran} \\
-        \textit{P.\ Heidari, A.\ Khonsari, \underline{A.\ Ahmadi Esfidi},
-        A.\ Mehrvarz, E.\ Khodaei, A.\ Dadlani} \\
-        \textit{Intelligent Systems with Applications} (Under Review) \quad Preprint: \href{https://doi.org/10.2139/ssrn.6959427}{\texttt{10.2139/ssrn.6959427}}}
-    \cvbullet {\color{medgray}
-        \textbf{Rule Caching in Programmable Networks with Deep Reinforcement
-        Learning} \\
-        \textit{M.\ Saberi, \underline{A.\ Ahmadi Esfidi}, M.\ Dolati,
-        A.\ Movaghar, A.\ Khonsari} \\
-        To be submitted to \textit{IEEE Transactions on Parallel and Distributed
-        Systems}}
-\end{itemize}
+\begin{enumerate}[leftmargin=1.5em, itemsep=4pt, topsep=0pt, partopsep=0pt, parsep=0pt, label={[\arabic*]}]
+    \item {\color{medgray}
+        P.\ Heidari, \underline{A.\ Ahmadi Esfidi}, A.\ Mehrvarz, E.\ Khodaei, A.\ Khonsari,
+        \textbf{Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches},
+        Published in \textit{CSICC 2025}. \href{https://doi.org/10.1109/CSICC65765.2025.10967419}{\texttt{View Paper}}.}
+    \item {\color{medgray}
+        P.\ Heidari, A.\ Khonsari, \underline{A.\ Ahmadi Esfidi}, A.\ Mehrvarz, E.\ Khodaei, A.\ Dadlani,
+        \textbf{DeepIrrigo: Deep Reinforcement Learning for Continuous and Discrete Action Irrigation Optimization --- A Case Study in Iran},
+        Under review at \textit{Intelligent Systems with Applications}. \href{https://doi.org/10.2139/ssrn.6959427}{\texttt{View Paper}}.}
+    \item {\color{medgray}
+        M.\ Saberi, \underline{A.\ Ahmadi Esfidi}, M.\ Dolati, A.\ Khonsari, A.\ Movaghar,
+        \textbf{Rule Caching in Programmable Networks with Deep Reinforcement Learning},
+        Submitted to \textit{IEEE Transactions on Network and Service Management}.}
+    \item {\color{medgray}
+        M.\ Saberi, \underline{A.\ Ahmadi Esfidi}, M.\ Dolati, N.\ Omidvar,
+        \textbf{FlexINA: In-Network Aggregation for Accelerating Distributed Machine Learning with Flexible Routing},
+        Submitted to \textit{IEEE Transactions on Network and Service Management}.}
+\end{enumerate}
 
 % ══════════════════════════════════════════════════════════
 %  PROJECTS
 % ══════════════════════════════════════════════════════════
-{\large\bfseries\color{darkgray} Selected Projects}\hfill%
-{\small\color{accent}\faGlobe\;\href{https://mr-ahmadi.github.io/Portfolio/#projects}{See more}}%
-\vspace{1pt}{\color{rulecol}\hrule height 1.5pt}\vspace{4pt}
+\section{\texorpdfstring{Selected Projects \hfill {\small\color{accent}\faGlobe\;\href{https://mr-ahmadi.github.io/Portfolio/\#projects}{See more}}}{Selected Projects}}
 
 \cvprojectnolink
 {DRL-Based Beamforming Optimization for Movable Intelligent Surfaces}%
 {Jun 2026 -- Present}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=10pt, parsep=0pt]
     \cvbullet {\color{medgray}
-        Designed a DRL framework to optimize beamforming for (MIS)-assisted SWIPT systems, implementing agents that jointly configure phase shifts and power splitting ratios to maximize energy harvesting.}
+        \textbf{Designed} a DRL framework to optimize beamforming for MIS-assisted SWIPT systems, jointly configuring phase shifts and power splitting ratios to maximize energy harvesting.}
     \cvbullet {\color{medgray}
         \textit{Stack:}\;
-        \tstack{PyTorch, Gymnasium, MOSEK, PennyLane, NumPy}}
+        \tstack{PyTorch, Gymnasium, MOSEK, NumPy}}
 \end{itemize}
 
-\vspace{6pt}
+\vspace{4pt}
 
 \cvproject{RL-Based ML Job Scheduler with Distribution Optimization}%
           {https://github.com/Mr-Ahmadi/RL-Job-Scheduler}{Aug 2025 -- Oct 2025}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
     \cvbullet {\color{medgray}
-        Developed a two-stage hierarchical PPO system for scheduling ML jobs on multi-server accelerator clusters using the Gavel dataset, reducing average job completion time.}
+        \textbf{Developed} a two-stage hierarchical PPO system for scheduling ML jobs on multi-server accelerator clusters using the Gavel dataset, reducing average job completion time.}
     \cvbullet {\color{medgray}
         \textit{Stack:}\;
         \tstack{PyTorch, Gymnasium, NumPy}}
 \end{itemize}
 
-\vspace{6pt}
+\vspace{4pt}
 
 \cvproject{Machine Learning Perspectives on Gold-Binding Peptides}%
           {https://github.com/Mr-Ahmadi/Gold-Binding-Peptides}{May 2025 -- Jun 2025}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
     \cvbullet {\color{medgray}
-        Applied machine learning to classify and predict gold-binding affinity of peptide sequences. Compared regression and classification approaches across multiple featurization strategies for bio-nanotechnology applications.}
+        \textbf{Applied} machine learning to classify and predict gold-binding affinity of peptide sequences, comparing regression and classification approaches across multiple featurization strategies.}
     \cvbullet {\color{medgray}
         \textit{Stack:}\;
         \tstack{PyTorch, Scikit-learn, Hugging Face, Pandas, NumPy/SciPy}}
 \end{itemize}
 
-\vspace{6pt}
+\vspace{4pt}
 
 \cvproject{RNA Pairing Pattern Recognition Model}%
           {https://github.com/Mr-Ahmadi/RNA-Secondary-Structure-Prediction}{Mar 2024 -- Jul 2024}
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=1pt]
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
     \cvbullet {\color{medgray}
-        Presented a preliminary version at the \href{https://drive.google.com/file/d/1XAE8CyOvJiSIugWqFTSvu-IC5736c76s/view}{CBRC Journal Club} and developed a system to predict RNA secondary structures using SCFGs, evolutionary information, and enhanced CYK parsing for complex motifs.}
+        \textbf{Developed} a system to predict RNA secondary structures using SCFGs, evolutionary information, and enhanced CYK parsing for complex motifs; presented at \href{https://drive.google.com/file/d/1XAE8CyOvJiSIugWqFTSvu-IC5736c76s/view}{CBRC Journal Club}.}
     \cvbullet {\color{medgray}
         \textit{Stack:}\;
         \tstack{NetworkX, Biopython, PhyML, NumPy/SciPy}}
@@ -303,17 +312,14 @@ Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir Univers
 % ══════════════════════════════════════════════════════════
 %  SKILLS
 % ══════════════════════════════════════════════════════════
-\section{Technical Skills}
-
-\begin{tabular}{@{}p{3.4cm}l@{}}
-    \textbf{\color{medgray}Languages} &
-        \tstack{Python, JavaScript, TypeScript, R, Java, C++, Swift}\\[6pt]
-    \textbf{\color{medgray}Frameworks} &
-        \tstack{React, Node.js, Express.js, Django, Electron}\\[6pt]
-    \textbf{\color{medgray}Data Science / ML} &
-        \tstack{PyTorch, TensorFlow, Pandas, Scikit-learn, NumPy, OpenCV, LangChain}\\[6pt]
-    \textbf{\color{medgray}Platforms \& Tools} &
-        \tstack{Docker, Git, GitHub, MongoDB, PostgreSQL, Hugging Face}\\
+\section{Skills}
+\begin{tabular}{@{}l @{\hspace{1em}} l@{}}
+    \textbf{\color{medgray}Programming Languages} &
+        \tstack{Python, JavaScript, TypeScript, R, Java, C++, Swift}\\[4pt]
+    \textbf{\color{medgray}Machine Learning Frameworks} &
+        \tstack{PyTorch, TensorFlow, Pandas, Scikit-learn, NumPy, OpenCV, LangChain}\\[4pt]
+    \textbf{\color{medgray}Tools \& Platforms} &
+        \tstack{Docker, Git, GitHub, MongoDB, PostgreSQL, Hugging Face}
 \end{tabular}
 
 % ══════════════════════════════════════════════════════════
@@ -321,8 +327,8 @@ Final-year \textbf{B.Sc.\ Computer Science student} at \textbf{Amirkabir Univers
 % ══════════════════════════════════════════════════════════
 \section{Languages}
 
-\begin{tabular}{@{}p{3.4cm}l@{}}
-    \textbf{\color{medgray}Persian} & \textcolor{medgray}{Native}\\[6pt]
+\begin{tabular}{@{}p{3.4cm}@{}l@{}}
+    \textbf{\color{medgray}Persian} & \textcolor{medgray}{Native}\\[4pt]
     \textbf{\color{medgray}English} & \textcolor{medgray}{Fluent}\\
 \end{tabular}
 
