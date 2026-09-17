@@ -23,6 +23,7 @@
 \definecolor{lightgray}{HTML}{718096}
 \definecolor{rulecol}{HTML}{c95f5d}
 \definecolor{dotcol}{HTML}{d48786}
+\definecolor{accentbg}{HTML}{f6e3e3}
 
 % ─── HYPERLINKS ──────────────────────────────────────────────────────────────
 \hypersetup{
@@ -56,7 +57,7 @@
     {\large\bfseries\color{darkgray}}
     {}{0em}{}
     [\vspace{2pt}{\color{rulecol}\hrule height 1.5pt}]
-\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titlespacing*{\section}{0pt}{9pt}{4pt}
 
 % ─── TECH LIST ──────────────────────────────────────────────────────────────
 \newcommand{\tdot}{{\color{dotcol}\,\textbullet\,\allowbreak}}
@@ -133,6 +134,34 @@
     \vspace{3pt}% match the bottom skip a bullet list leaves behind
 }
 
+% ─── TEACHING TABLE ──────────────────────────────────────────────────────────
+% Small rounded-look tag for the course level.
+\newcommand{\leveltag}[1]{%
+    {\setlength{\fboxsep}{1.2pt}\colorbox{accentbg}{\scriptsize\color{accent}\vphantom{Ag}\,#1\,}}}
+% #1 = course, #2 = level, #3 = instructor(s), #4 = term
+\newcommand{\cvta}[4]{%
+    {\color{accent}\tiny\faCircle}\hspace{0.55em}%
+    \textbf{\color{darkgray}\small #1}\;\leveltag{#2} &
+    {\small\color{medgray}#3} &
+    {\small\color{lightgray}#4}\\
+}
+\newenvironment{tatable}{%
+    \par\vspace{\headskip}%
+    \renewcommand{\arraystretch}{1.12}%
+    \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}lr@{}}%
+}{%
+    \end{tabular*}\par
+}
+
+% ─── LANGUAGES ───────────────────────────────────────────────────────────────
+% #1 = language, #2 = level
+% Styled like an entry header: "Language  >  level".
+\newcommand{\cvlang}[2]{%
+    \textbf{\color{darkgray}#1}%
+    \textcolor{lightgray}{\small\;\faChevronRight\;}%
+    \textcolor{medgray}{\small #2}%
+}
+
 % ─── TWO-COLUMN LABEL TABLE (Skills, Languages) ──────────────────────────────
 \newcommand{\cvrow}[2]{\textbf{\color{medgray}#1} & #2}
 
@@ -168,7 +197,7 @@
 \begin{cvitems}
     \cvbullet {\color{medgray}
         Location: Tehran, Iran \tdot Field of study: Computer Science
-        \tdot GPA: 18.90/20 \tdot Top 20\%}
+        \tdot GPA: 18.93/20 \tdot Top 20\%}
 \end{cvitems}
 
 \entrygap
@@ -247,18 +276,14 @@
 
 \cventry{Teaching Assistant}{Graduate \& Undergraduate Courses}%
         {Sep 2024 -- Present}{Amirkabir University of Technology \& Tehran University}
-\begin{cvitems}
-    \cvbullet {\color{medgray}
-        \textbf{Quantum Information Processing} (Master's, Prof.\ Khonsari) --- Sep 2025 -- Jan 2026}
-    \cvbullet {\color{medgray}
-        \textbf{Computational Data Mining} (Master's, Prof.\ Ghatee) --- Sep 2025 -- Jan 2026}
-    \cvbullet {\color{medgray}
-        \textbf{Theory of Computation} (Dr.\ Didehvar) --- Sep 2024 -- Jun 2026}
-    \cvbullet {\color{medgray}
-        \textbf{Introduction to Logic} (Dr.\ Didehvar) --- Sep 2025 -- Jan 2026}
-    \cvbullet {\color{medgray}
-        \textbf{Artificial Intelligence \& Workshop} (Prof.\ Ghatee, Dr.\ Yousefimehr) --- Sep 2024 -- Jan 2025}
-\end{cvitems}
+\begin{tatable}
+    \cvta{Data Mining}{B.Sc.}{Dr.\ Yousefimehr}{Sep 2026 -- Present}
+    \cvta{Quantum Information Processing}{M.Sc.}{Prof.\ Khonsari}{Sep 2025 -- Jan 2026}
+    \cvta{Computational Data Mining}{M.Sc.}{Prof.\ Ghatee}{Sep 2025 -- Jan 2026}
+    \cvta{Introduction to Logic}{B.Sc.}{Dr.\ Didehvar}{Sep 2025 -- Jan 2026}
+    \cvta{Theory of Computation}{B.Sc.}{Dr.\ Didehvar}{Sep 2024 -- Jun 2026}
+    \cvta{Artificial Intelligence \& Workshop}{B.Sc.}{Prof.\ Ghatee, Dr.\ Yousefimehr}{Sep 2024 -- Jan 2025}
+\end{tatable}
 
 % ══════════════════════════════════════════════════════════
 %  PUBLICATIONS
@@ -356,12 +381,11 @@
 % ══════════════════════════════════════════════════════════
 %  LANGUAGES
 % ══════════════════════════════════════════════════════════
-\section{Languages}
+% \section{Languages}
 
-\begin{tabular}{@{}p{\labelcolw}@{}l@{}}
-    \cvrow{Persian}{\textcolor{medgray}{Native}}\\[4pt]
-    \cvrow{English}{\textcolor{medgray}{Fluent}}
-\end{tabular}
+% \begin{tabular}{@{}p{\labelcolw}@{}l@{}}
+%     \cvlang{Persian}{Native} & \cvlang{English}{Fluent}
+% \end{tabular}
 
 % ══════════════════════════════════════════════════════════
 %  CERTIFICATIONS
