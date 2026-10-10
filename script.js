@@ -166,7 +166,7 @@ document.querySelectorAll('a[target="_blank"]').forEach(link => {
 // Console Easter Egg
 console.log('%c👋 Hello there!', 'font-size: 20px; color: #a94442; font-weight: bold;');
 console.log('%cLooking at the code? I like your style!', 'font-size: 14px; color: #2d3748;');
-console.log('%cFeel free to reach out: mr-ahmadi2004@outlook.com', 'font-size: 12px; color: #718096;');
+console.log('%cFeel free to reach out: aliahmadiesfidi@outlook.com', 'font-size: 12px; color: #718096;');
 
 // Prevent scrolling issues on mobile when menu is open
 if (navMenu && navToggle) {
@@ -297,8 +297,8 @@ function renderPage(data) {
 const PORTFOLIO_JSON = {
   "hero": {
     "name": "Ali Ahmadi Esfidi",
-    "tagline": "AI Researcher & Web/Software Developer 🚀",
-    "bio": "Final-year B.Sc. Computer Science student at Amirkabir University of Technology, with experience as an AI researcher and developer focused on deep reinforcement learning and machine learning for real-world decision-making systems. Experienced in applied projects across infrastructure monitoring, agriculture, and computational biology. Skilled in developing practical, data-driven AI solutions from modeling to deployment, with a strong background in software and web development that supports end-to-end system building. Motivated by problems where intelligent automation creates measurable real-world impact.",
+    "tagline": "AI Researcher & Developer 🚀",
+    "bio": "B.Sc. graduate in Computer Science from Amirkabir University of Technology, working as an AI researcher and developer focused on deep reinforcement learning and machine learning for real-world decision-making systems. Experienced in applied projects across infrastructure monitoring, agriculture, and computational biology. Skilled in developing practical, data-driven AI solutions from modeling to deployment, with a strong background in software and web development that supports end-to-end system building. Motivated by problems where intelligent automation creates measurable real-world impact.",
     "avatar": "👨‍💻",
     "ctaPrimary": {
       "text": "Get In Touch",
@@ -314,34 +314,34 @@ const PORTFOLIO_JSON = {
       "name": "Ali Ahmadi Esfidi",
       "education": "BS in Computer Science",
       "university": "Amirkabir University of Technology",
-      "period": "Sept 2022 - Jun 2026",
-      "email": "mr-ahmadi2004@outlook.com",
+      "period": "Sep 2022 - Sep 2026",
+      "email": "aliahmadiesfidi@outlook.com",
       "phone": "+98 904 4478 539"
     },
     "interests": [
       {
         "icon": "fa-robot",
-        "label": "Reinforcement Learning"
+        "label": "Deep Reinforcement Learning"
       },
       {
         "icon": "fa-brain",
-        "label": "Machine Learning"
+        "label": "ML for Decision-Making Systems"
+      },
+      {
+        "icon": "fa-bridge",
+        "label": "AI for Infrastructure Monitoring"
+      },
+      {
+        "icon": "fa-chart-line",
+        "label": "Optimization for AI & Networking"
       },
       {
         "icon": "fa-dna",
-        "label": "Computational Biology"
+        "label": "Computational Biology & Bioinformatics"
       },
       {
         "icon": "fa-network-wired",
-        "label": "Deep Learning"
-      },
-      {
-        "icon": "fa-code",
-        "label": "Web Development"
-      },
-      {
-        "icon": "fa-project-diagram",
-        "label": "Algorithm Design"
+        "label": "SDN & Resource Allocation"
       }
     ],
     "skills": {
@@ -388,45 +388,57 @@ const PORTFOLIO_JSON = {
         "title": "🔬 Research Assistant  - NORC Lab",
         "date": "Jan 2025 - Present",
         "institution": "🎓 Amirkabir University of Technology",
-        "detail": "👨‍🏫 Supervisor: Dr. Ghatee"
+        "detail": "👨‍🏫 Supervisor: Prof. Ghatee"
       },
       {
         "title": "🔬 Research Assistant - High Performance Networks Lab",
-        "date": "Sept 2024 - Present",
+        "date": "Sep 2024 - Present",
         "institution": "🎓 University of Tehran",
-        "detail": "👨‍🏫 Supervisor: Dr. Khonsari"
+        "detail": "👨‍🏫 Supervisor: Prof. Khonsari"
+      },
+      {
+        "title": "🔬 Research Assistant – SUT",
+        "date": "Sep 2025 – Present",
+        "institution": "🎓 Sharif University of Technology",
+        "detail": "👨‍🏫 Supervisor: Dr. Dolati"
       }
     ],
     "teaching": [
       {
-        "title": "📚 Teaching Assistant - Theory Of Computation",
-        "date": "Sep 2024 – Present",
+        "title": "📚 Teaching Assistant - Data Mining",
+        "date": "Sep 2026 – Present",
         "institution": "🎓 Amirkabir University of Technology",
-        "detail": "👨‍🏫 Instructor: Dr. Didehvar"
+        "detail": "👨‍🏫 Instructor: Dr. Yousefimehr"
       },
       {
         "title": "📚 Teaching Assistant - Quantum Information Processing",
         "date": "Sep 2025 – Jan 2026",
         "institution": "🎓 Tehran University",
-        "detail": "👨‍🏫 Instructor: Dr. Khonsari"
+        "detail": "👨‍🏫 Instructor: Prof. Khonsari"
       },
       {
         "title": "📚 Teaching Assistant - Computational Data Mining",
         "date": "Sep 2025 – Jan 2026",
-        "institution": "🎓Amirkabir University of Technology",
-        "detail": "👨‍🏫 Instructors: Dr. Ghatee"
+        "institution": "🎓 Amirkabir University of Technology",
+        "detail": "👨‍🏫 Instructor: Prof. Ghatee"
       },
       {
         "title": "📚 Teaching Assistant - Introduction to Logic",
         "date": "Sep 2025 – Jan 2026",
-        "institution": "🎓Amirkabir University of Technology",
+        "institution": "🎓 Amirkabir University of Technology",
+        "detail": "👨‍🏫 Instructor: Dr. Didehvar"
+      },
+      {
+        "title": "📚 Teaching Assistant - Theory Of Computation",
+        "date": "Sep 2024 – Jun 2026",
+        "institution": "🎓 Amirkabir University of Technology",
         "detail": "👨‍🏫 Instructor: Dr. Didehvar"
       },
       {
         "title": "📚 Teaching Assistant - Artificial Intelligence & Workshop",
-        "date": "Sept 2024 - Jan 2025",
-        "institution": "🎓Amirkabir University of Technology",
-        "detail": "👨‍🏫 Instructors: Dr. Ghatee, Dr. Yousefimehr"
+        "date": "Sep 2024 – Jan 2025",
+        "institution": "🎓 Amirkabir University of Technology",
+        "detail": "👨‍🏫 Instructors: Prof. Ghatee, Dr. Yousefimehr"
       }
     ],
     "certificates": [
@@ -440,9 +452,9 @@ const PORTFOLIO_JSON = {
       },
       {
         "title": "🧬 Introduction to Bioinformatics",
-        "date": "Feb 2025 - Jul 2025",
-        "institution": "🏢 BioCan",
-        "detail": "👨‍🏫 Scientific Chair: Dr. K. Kavousi",
+        "date": "Jul 2025",
+        "institution": "🏢 Biocan",
+        "detail": "👨‍🏫 Scientific Chair: Dr. K. Kavousi • Score: 96/100 • Top 3% of 350+ students",
         "linkLabel": "View Certificate",
         "link": "https://drive.google.com/file/d/1wQgazces8McKTpEEtXOt706EJZTsZOQ0/view"
       },
@@ -465,10 +477,32 @@ const PORTFOLIO_JSON = {
     ],
     "publications": [
       {
-        "title": "🌾 Irrigation Optimization in Agricultural Fields Using DRL Approaches",
+        "title": "🔀 FlexINA: In-Network Aggregation for Accelerating Distributed Machine Learning with Flexible Routing",
+        "date": "Accepted",
+        "institution": "M. Saberi, Ali Ahmadi Esfidi, M. Dolati, N. Omidvar",
+        "detail": "📄 IEEE Transactions on Network and Service Management",
+        "link": "https://doi.org/10.1109/TNSM.2026.3740503",
+        "linkLabel": "DOI: 10.1109/TNSM.2026.3740503"
+      },
+      {
+        "title": "🌾 DeepIrrigo: Deep Reinforcement Learning for Continuous and Discrete Action Irrigation Optimization — A Case Study in Iran",
+        "date": "Under Review",
+        "institution": "P. Heidari, A. Khonsari, Ali Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Dadlani",
+        "detail": "📄 Intelligent Systems with Applications",
+        "link": "https://doi.org/10.2139/ssrn.6959427",
+        "linkLabel": "DOI: 10.2139/ssrn.6959427"
+      },
+      {
+        "title": "🗂️ Rule Caching in Programmable Networks with Deep Reinforcement Learning",
+        "date": "Submitted",
+        "institution": "M. Saberi, Ali Ahmadi Esfidi, M. Dolati, A. Khonsari, A. Movaghar",
+        "detail": "📄 IEEE Transactions on Network and Service Management"
+      },
+      {
+        "title": "🌾 Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches",
         "date": "Feb 2025",
-        "institution": "Parsa Heidari, Ali Ahmadi Esfidi, Ali Mehrvarz, Elaheh Khodaei, Ahmad Khonsari",
-        "detail": "",
+        "institution": "P. Heidari, Ali Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Khonsari",
+        "detail": "📄 CSICC 2025",
         "link": "https://doi.org/10.1109/CSICC65765.2025.10967419",
         "linkLabel": "DOI: 10.1109/CSICC65765.2025.10967419"
       }
@@ -548,8 +582,8 @@ const PORTFOLIO_JSON = {
     {
       "icon": "🧬",
       "title": "RNA Secondary Structure Prediction",
-      "date": "Apr, 2024",
-      "description": "Developed a hybrid RNA secondary structure predictor that integrated Stochastic Context-Free Grammars (SCFGs) with evolutionary covariance models to improve pseudoknot detection. Implemented the CYK algorithm for efficient parse-tree inference across nested and crossing base-pair interactions. ",
+      "date": "Mar, 2024",
+      "description": "Developed a hybrid RNA secondary structure predictor that integrated Stochastic Context-Free Grammars (SCFGs) with evolutionary covariance models to improve pseudoknot detection. Implemented an enhanced CYK algorithm for efficient parse-tree inference across nested and crossing base-pair interactions. Presented at the CBRC Journal Club.",
       "tags": [
         "context-free-grammar",
         "cyk-algorithm",
@@ -562,8 +596,8 @@ const PORTFOLIO_JSON = {
     {
       "icon": "⚡",
       "title": "RL Job Scheduler",
-      "date": "Nov, 2025",
-      "description": "Designed a two-stage hierarchical reinforcement learning scheduler for ML training jobs on shared clusters. The high-level agent allocates resources across queues while the low-level agent optimizes per-job execution order, reducing average job completion time.",
+      "date": "Aug, 2025",
+      "description": "Designed a two-stage hierarchical PPO scheduler for ML training jobs on multi-server accelerator clusters, trained and evaluated on the Gavel dataset. The high-level agent allocates resources across queues while the low-level agent optimizes per-job execution order, reducing average job completion time.",
       "tags": [
         "deep-reinforcement-learning",
         "hierarchical-rl",
@@ -813,7 +847,7 @@ const PORTFOLIO_JSON = {
     }
   ],
   "contact": {
-    "email": "mr-ahmadi2004@outlook.com",
+    "email": "aliahmadiesfidi@outlook.com",
     "github": "Mr-Ahmadi",
     "linkedin": "Ali Ahmadi Esfidi",
     "phone": "+98 904 4478 539",
