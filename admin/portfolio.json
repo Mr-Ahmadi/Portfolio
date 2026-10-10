@@ -181,32 +181,32 @@
     ],
     "publications": [
       {
-        "title": "🔀 FlexINA: In-Network Aggregation for Accelerating Distributed Machine Learning with Flexible Routing",
-        "date": "Accepted",
-        "institution": "M. Saberi, Ali Ahmadi Esfidi, M. Dolati, N. Omidvar",
-        "detail": "📄 IEEE Transactions on Network and Service Management",
+        "title": "📄 FlexINA: In-Network Aggregation for Accelerating Distributed Machine Learning with Flexible Routing",
+        "date": "Published",
+        "institution": "👥 M. Saberi, A. Ahmadi Esfidi, M. Dolati, N. Omidvar",
+        "detail": "📰 IEEE Transactions on Network and Service Management",
         "link": "https://doi.org/10.1109/TNSM.2026.3740503",
         "linkLabel": "DOI: 10.1109/TNSM.2026.3740503"
       },
       {
-        "title": "🌾 DeepIrrigo: Deep Reinforcement Learning for Continuous and Discrete Action Irrigation Optimization — A Case Study in Iran",
+        "title": "📄 DeepIrrigo: Deep Reinforcement Learning for Continuous and Discrete Action Irrigation Optimization — A Case Study in Iran",
         "date": "Under Review",
-        "institution": "P. Heidari, A. Khonsari, Ali Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Dadlani",
-        "detail": "📄 Intelligent Systems with Applications",
+        "institution": "👥 P. Heidari, A. Khonsari, A. Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Dadlani",
+        "detail": "📰 Intelligent Systems with Applications",
         "link": "https://doi.org/10.2139/ssrn.6959427",
         "linkLabel": "DOI: 10.2139/ssrn.6959427"
       },
       {
-        "title": "🗂️ Rule Caching in Programmable Networks with Deep Reinforcement Learning",
+        "title": "📄 Rule Caching in Programmable Networks with Deep Reinforcement Learning",
         "date": "Submitted",
-        "institution": "M. Saberi, Ali Ahmadi Esfidi, M. Dolati, A. Khonsari, A. Movaghar",
-        "detail": "📄 IEEE Transactions on Network and Service Management"
+        "institution": "👥 M. Saberi, A. Ahmadi Esfidi, M. Dolati, A. Khonsari, A. Movaghar",
+        "detail": "📰 IEEE Transactions on Network and Service Management"
       },
       {
-        "title": "🌾 Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches",
-        "date": "Feb 2025",
-        "institution": "P. Heidari, Ali Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Khonsari",
-        "detail": "📄 CSICC 2025",
+        "title": "📄 Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches",
+        "date": "Published",
+        "institution": "👥 P. Heidari, A. Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Khonsari",
+        "detail": "📰 CSICC 2025",
         "link": "https://doi.org/10.1109/CSICC65765.2025.10967419",
         "linkLabel": "DOI: 10.1109/CSICC65765.2025.10967419"
       }

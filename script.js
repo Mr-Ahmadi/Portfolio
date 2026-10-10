@@ -1,9 +1,44 @@
+// Mobile Navigation Menu
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+// Lock page scrolling only while the menu is open; every close path goes through here
+function setMenuOpen(open) {
+    if (!navToggle || !navMenu) return;
+    navMenu.classList.toggle('active', open);
+    navToggle.classList.toggle('active', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+}
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setMenuOpen(!navMenu.classList.contains('active'));
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') &&
+            !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            setMenuOpen(false);
+        }
+    });
+
+    // Reset menu when resizing to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) setMenuOpen(false);
+    });
+}
+
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
+            // Close the menu first so scrolling is unlocked before the jump
+            setMenuOpen(false);
+
             const navHeight = document.getElementById('navbar').offsetHeight;
             const targetPosition = target.offsetTop - navHeight;
 
@@ -11,44 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: targetPosition,
                 behavior: 'smooth'
             });
-
-            // Close mobile menu if open
-            const navMenu = document.getElementById('navMenu');
-            const navToggle = document.getElementById('navToggle');
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        }
-    });
-});
-
-// Mobile Navigation Toggle
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
-    });
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (navToggle && navMenu) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        }
-    }
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu && navToggle) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
         }
     });
 });
@@ -168,26 +165,6 @@ console.log('%c👋 Hello there!', 'font-size: 20px; color: #a94442; font-weight
 console.log('%cLooking at the code? I like your style!', 'font-size: 14px; color: #2d3748;');
 console.log('%cFeel free to reach out: aliahmadiesfidi@outlook.com', 'font-size: 12px; color: #718096;');
 
-// Prevent scrolling issues on mobile when menu is open
-if (navMenu && navToggle) {
-    const body = document.body;
-    navToggle.addEventListener('click', () => {
-        if (navMenu.classList.contains('active')) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = 'auto';
-        }
-    });
-
-    // Reset overflow when resizing window
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            body.style.overflow = 'auto';
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        }
-    });
-}
 
 
 // Render all page sections from portfolio data
@@ -477,32 +454,32 @@ const PORTFOLIO_JSON = {
     ],
     "publications": [
       {
-        "title": "🔀 FlexINA: In-Network Aggregation for Accelerating Distributed Machine Learning with Flexible Routing",
-        "date": "Accepted",
-        "institution": "M. Saberi, Ali Ahmadi Esfidi, M. Dolati, N. Omidvar",
-        "detail": "📄 IEEE Transactions on Network and Service Management",
+        "title": "📄 FlexINA: In-Network Aggregation for Accelerating Distributed Machine Learning with Flexible Routing",
+        "date": "Published",
+        "institution": "👥 M. Saberi, A. Ahmadi Esfidi, M. Dolati, N. Omidvar",
+        "detail": "📰 IEEE Transactions on Network and Service Management",
         "link": "https://doi.org/10.1109/TNSM.2026.3740503",
         "linkLabel": "DOI: 10.1109/TNSM.2026.3740503"
       },
       {
-        "title": "🌾 DeepIrrigo: Deep Reinforcement Learning for Continuous and Discrete Action Irrigation Optimization — A Case Study in Iran",
+        "title": "📄 DeepIrrigo: Deep Reinforcement Learning for Continuous and Discrete Action Irrigation Optimization — A Case Study in Iran",
         "date": "Under Review",
-        "institution": "P. Heidari, A. Khonsari, Ali Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Dadlani",
-        "detail": "📄 Intelligent Systems with Applications",
+        "institution": "👥 P. Heidari, A. Khonsari, A. Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Dadlani",
+        "detail": "📰 Intelligent Systems with Applications",
         "link": "https://doi.org/10.2139/ssrn.6959427",
         "linkLabel": "DOI: 10.2139/ssrn.6959427"
       },
       {
-        "title": "🗂️ Rule Caching in Programmable Networks with Deep Reinforcement Learning",
+        "title": "📄 Rule Caching in Programmable Networks with Deep Reinforcement Learning",
         "date": "Submitted",
-        "institution": "M. Saberi, Ali Ahmadi Esfidi, M. Dolati, A. Khonsari, A. Movaghar",
-        "detail": "📄 IEEE Transactions on Network and Service Management"
+        "institution": "👥 M. Saberi, A. Ahmadi Esfidi, M. Dolati, A. Khonsari, A. Movaghar",
+        "detail": "📰 IEEE Transactions on Network and Service Management"
       },
       {
-        "title": "🌾 Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches",
-        "date": "Feb 2025",
-        "institution": "P. Heidari, Ali Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Khonsari",
-        "detail": "📄 CSICC 2025",
+        "title": "📄 Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches",
+        "date": "Published",
+        "institution": "👥 P. Heidari, A. Ahmadi Esfidi, A. Mehrvarz, E. Khodaei, A. Khonsari",
+        "detail": "📰 CSICC 2025",
         "link": "https://doi.org/10.1109/CSICC65765.2025.10967419",
         "linkLabel": "DOI: 10.1109/CSICC65765.2025.10967419"
       }
