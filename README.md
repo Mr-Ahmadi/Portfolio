@@ -145,7 +145,7 @@ Content is managed via the `PORTFOLIO_JSON` object in `script.js`, or through th
 
 - **Email**: <aliahmadiesfidi@outlook.com>
 - **GitHub**: [@Mr-Ahmadi](https://github.com/Mr-Ahmadi)
-- **LinkedIn**: [Ali Ahmadi Esfidi](https://linkedin.com/in/ali-ahmadi-esfidi)
+- **LinkedIn**: [Ali Ahmadi Esfidi](https://www.linkedin.com/in/ali-ahmadi-esfidi/)
 - **Phone**: +98 904 4478 539
 
 ---

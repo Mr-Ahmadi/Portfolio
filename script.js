@@ -237,7 +237,7 @@ function renderPage(data) {
     contactGrid.innerHTML = `
       <a href="mailto:${c.email}" class="contact-card"><div class="contact-icon">📧</div><h4>Email</h4><p>${c.email.replace('@', '<br/>@')}</p></a>
       <a href="https://github.com/${c.github}" class="contact-card" target="_blank" rel="noopener noreferrer"><div class="contact-icon"><i class="fab fa-github"></i></div><h4>GitHub</h4><p>@${c.github}</p></a>
-      <a href="https://linkedin.com/in/${c.linkedin}" class="contact-card" target="_blank" rel="noopener noreferrer"><div class="contact-icon"><i class="fab fa-linkedin"></i></div><h4>LinkedIn</h4><p>${c.linkedin}</p></a>
+      <a href="https://www.linkedin.com/in/${c.linkedin}" class="contact-card" target="_blank" rel="noopener noreferrer"><div class="contact-icon"><i class="fab fa-linkedin"></i></div><h4>LinkedIn</h4><p>${c.linkedin}</p></a>
       <a href="tel:${c.phone}" class="contact-card"><div class="contact-icon">📞</div><h4>Phone</h4><p>${c.phone}</p></a>`
   }
 
@@ -826,7 +826,7 @@ const PORTFOLIO_JSON = {
   "contact": {
     "email": "aliahmadiesfidi@outlook.com",
     "github": "Mr-Ahmadi",
-    "linkedin": "Ali Ahmadi Esfidi",
+    "linkedin": "ali-ahmadi-esfidi",
     "phone": "+98 904 4478 539",
     "intro": {
       "heading": "Let's Connect! 🤝",
