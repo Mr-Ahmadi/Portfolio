@@ -16,14 +16,13 @@
 \usepackage{multicol}
 
 % ─── COLORS ──────────────────────────────────────────────────────────────────
-\definecolor{accent}{HTML}{a94442}
-\definecolor{accentlight}{HTML}{c95f5d}
-\definecolor{darkgray}{HTML}{2d3748}
-\definecolor{medgray}{HTML}{4a5568}
-\definecolor{lightgray}{HTML}{718096}
-\definecolor{rulecol}{HTML}{c95f5d}
-\definecolor{dotcol}{HTML}{d48786}
-\definecolor{accentbg}{HTML}{f6e3e3}
+\definecolor{accent}{HTML}{9B4548}
+\definecolor{darkgray}{HTML}{273241}
+\definecolor{medgray}{HTML}{455365}
+\definecolor{lightgray}{HTML}{617084}
+\definecolor{rulecol}{HTML}{C9A1A2}
+\definecolor{dotcol}{HTML}{B77578}
+\definecolor{accentbg}{HTML}{F6EAEA}
 
 % ─── HYPERLINKS ──────────────────────────────────────────────────────────────
 \hypersetup{
@@ -40,8 +39,8 @@
 \emergencystretch=3em  % help avoid overfull boxes
 
 % Single source of truth for the vertical rhythm.
-\newlength{\entryskip}    \setlength{\entryskip}{6pt}   % between entries in a section
-\newlength{\headskip}     \setlength{\headskip}{3pt}    % entry header -> its bullet list
+\newlength{\entryskip}    \setlength{\entryskip}{3pt}   % between entries in a section
+\newlength{\headskip}     \setlength{\headskip}{2pt}   % entry header -> its bullet list
 \newlength{\cvindent}     \setlength{\cvindent}{1.35em} % bullet text indent
 \newlength{\sublinelift}  \setlength{\sublinelift}{5.3pt} % pulled off above a sub-line
 \newlength{\sublinedrop}  \setlength{\sublinedrop}{1.3pt} % given back below it
@@ -52,12 +51,18 @@
 
 \newcommand{\entrygap}{\vspace{\entryskip}}
 
+% Compact, accented subheadings for publication types.
+\newcommand{\cvpubgroup}[2]{%
+    \noindent{\small\color{accent}#1\hspace{0.5em}\bfseries #2}%
+    \par\nobreak\vspace{-1pt}%
+}
+
 % ─── SECTION STYLE ──────────────────────────────────────────────────────────
 \titleformat{\section}
     {\large\bfseries\color{darkgray}}
     {}{0em}{}
-    [\vspace{2pt}{\color{rulecol}\hrule height 1.5pt}]
-\titlespacing*{\section}{0pt}{9pt}{4pt}
+    [\vspace{2pt}{\color{rulecol}\hrule height 0.8pt}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
 
 % ─── TECH LIST ──────────────────────────────────────────────────────────────
 \newcommand{\tdot}{{\color{dotcol}\,\textbullet\,\allowbreak}}
@@ -66,10 +71,10 @@
     \def\tfirst{1}%
     \foreach \x in {#1} {%
         \ifnum\tfirst=1
-            {\small\color{accent}\texttt{\x}}%
+            {\small\color{medgray}\texttt{\x}}%
             \gdef\tfirst{0}%
         \else
-            \tdot{\small\color{accent}\texttt{\x}}%
+            \tdot{\small\color{medgray}\texttt{\x}}%
         \fi
     }%
 }
@@ -83,16 +88,16 @@
                   itemsep=2pt, topsep=\headskip, partopsep=0pt, parsep=0pt}
 
 % ─── ENTRY HEADERS ───────────────────────────────────────────────────────────
-% Icon + "Title  >  subtitle .................................. [icon] date"
-\newcommand{\cvheadicon}[4]{%
+% Title | subtitle, with the date aligned at the right edge.
+\newcommand{\parttime}{\,{\small\mdseries\color{lightgray}(part-time)}}
+\newcommand{\cvhead}[3]{%
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
-        \textbf{\color{darkgray}#2}%
-        \textcolor{lightgray}{\small\;\faChevronRight\;}%
-        \textcolor{medgray}{\small #3} &
-        {\small\color{lightgray}#1\;\,#4}
+        \textbf{\color{darkgray}#1}%
+        \textcolor{rulecol}{\small\;|\;}%
+        \textcolor{medgray}{\small #2} &
+        {\small\color{lightgray}#3}
     \end{tabularx}%
 }
-\newcommand{\cvhead}[3]{\cvheadicon{\faCalendar[regular]}{#1}{#2}{#3}}
 
 % Secondary line under a header (location / details); wraps safely.
 % #1 = left indent, #2 = text.
@@ -116,22 +121,22 @@
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
         \textbf{\color{darkgray}#1}\;\,%
         \href{#2}{\small\color{lightgray}\faGithub} &
-        {\small\color{lightgray}\faCalendar[regular]\;\,#3}
+        {\small\color{lightgray}#3}
     \end{tabularx}%
 }
 
 \newcommand{\cvprojectnolink}[2]{%
     \begin{tabularx}{\linewidth}{@{}Xr@{}}
         \textbf{\color{darkgray}#1} &
-        {\small\color{lightgray}\faCalendar[regular]\;\,#2}
+        {\small\color{lightgray}#2}
     \end{tabularx}%
 }
 
 % ─── CERT / VOLUNTEER ENTRY ──────────────────────────────────────────────────
-\newcommand{\cvmisc}[5]{%
-    \cvheadicon{#4}{#2}{#3}{#1}%
-    \cvsubline{#5}%
-    \vspace{3pt}% match the bottom skip a bullet list leaves behind
+\newcommand{\cvmisc}[4]{%
+    \cvhead{#2}{#3}{#1}%
+    \cvsubline{#4}%
+    \vspace{2pt}% match the bottom skip a bullet list leaves behind
 }
 
 % ─── TEACHING TABLE ──────────────────────────────────────────────────────────
@@ -143,7 +148,7 @@
     {\color{accent}\tiny\faCircle}\hspace{0.55em}%
     \textbf{\color{darkgray}\small #1}\;\leveltag{#2} &
     {\small\color{medgray}#3} &
-    {\small\color{lightgray}#4}\\
+        {\small\color{lightgray}#4}\\
 }
 \newenvironment{tatable}{%
     \par\vspace{\headskip}%
@@ -158,12 +163,30 @@
 % Styled like an entry header: "Language  >  level".
 \newcommand{\cvlang}[2]{%
     \textbf{\color{darkgray}#1}%
-    \textcolor{lightgray}{\small\;\faChevronRight\;}%
+    \textcolor{rulecol}{\small\;|\;}%
     \textcolor{medgray}{\small #2}%
 }
 
 % ─── TWO-COLUMN LABEL TABLE (Skills, Languages) ──────────────────────────────
 \newcommand{\cvrow}[2]{\textbf{\color{medgray}#1} & #2}
+
+% #1 = name, #2 = profile URL, #3 = title, #4 = university, #5 = email.
+\newlength{\refcardw}
+\newcommand{\cvrefcard}[5]{%
+    \begingroup
+    \setlength{\refcardw}{\dimexpr\linewidth/3-4pt\relax}%
+    \begin{minipage}[t]{\refcardw}
+        \raggedright
+        \textbf{\color{darkgray}#1}%
+        \textcolor{rulecol}{\small\;|\;}\href{#2}{{\scriptsize\color{accent}Scholar}}\par
+        \vspace{2pt}
+        {\small\color{medgray}#3}\par
+        {\small\color{lightgray}#4}\par
+        \vspace{3pt}
+        {\footnotesize\color{accent}\faEnvelope\;\href{mailto:#5}{\nolinkurl{#5}}}\par
+    \end{minipage}%
+    \endgroup
+}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{document}
@@ -185,7 +208,12 @@
     }
 \end{center}
 \vspace{5pt}
-{\color{rulecol}\hrule height 2pt}
+{\color{rulecol}\hrule height 0.8pt}
+
+\vspace{4pt}
+\noindent{\normalsize\color{medgray}
+\textbf{\color{accent}Summary.}\; I am an AI researcher and developer with a B.Sc.\ in Computer Science from Amirkabir University of Technology (2026). I focus on deep reinforcement learning and machine learning for real-world decision-making, with published work in network optimization and applied projects in infrastructure monitoring and computational biology. My software and web development background helps me translate research models into practical, reliable tools.\par}
+\vspace{0pt}
 
 % ══════════════════════════════════════════════════════════
 %  EDUCATION
@@ -196,19 +224,25 @@
        {Sep 2022 -- Sep 2026}
 \begin{cvitems}
     \cvbullet {\color{medgray}
+        \textbf{Bachelor's thesis:}\enspace
+        {\color{darkgray}Machine Learning Perspectives on Gold-Binding Peptides}%
+        \hspace{3pt}\href{https://github.com/Mr-Ahmadi/Gold-Binding-Peptides}{\small\color{lightgray}\faGithub}\\[-1pt]
+        \tdot Supervisor: Fatemeh Zare-Mirakabad%
+        \textcolor{rulecol}{\small\;|\;}\href{https://scholar.google.com/citations?user=0rwrLKkAAAAJ\&hl=en}{{\small\color{accent}Scholar}}}
+    \cvbullet {\color{medgray}
         Location: Tehran, Iran \tdot Field of study: Computer Science
         \tdot GPA: 18.93/20 \tdot Top 20\%}
 \end{cvitems}
 
-\entrygap
+% \entrygap
 
-\cvhead{High School Diploma}{Dr.\ Shahriari High School (SAMPAD)}%
-       {Sep 2019 -- Jun 2022}
-\begin{cvitems}
-    \cvbullet {\color{medgray}
-        Location: Qom, Iran \tdot Field of study: Mathematics \& Physics
-        \tdot GPA: 18.42/20}
-\end{cvitems}
+% \cvhead{High School Diploma}{Dr.\ Shahriari High School (SAMPAD)}%
+%        {Sep 2019 -- Jun 2022}
+% \begin{cvitems}
+%     \cvbullet {\color{medgray}
+%         Location: Qom, Iran \tdot Field of study: Mathematics \& Physics
+%         \tdot GPA: 18.42/20}
+% \end{cvitems}
 
 % ══════════════════════════════════════════════════════════
 %  RESEARCH INTERESTS
@@ -228,69 +262,12 @@
 \end{multicols}
 
 % ══════════════════════════════════════════════════════════
-%  EXPERIENCE
-% ══════════════════════════════════════════════════════════
-\section{Experiences}
-
-\cventry{Research Assistant}{Supervisor: Prof.\ Ghatee}%
-        {Jan 2025 -- Present}{NORC Lab, Amirkabir University of Technology}
-\begin{cvitems}
-    \cvbullet {\color{medgray}
-        \textbf{Led} an AI team and \textbf{engineered} web systems and deep learning models for automated bridge damage detection in collaboration with the Tehran Urban Planning and Research Center.}
-    \cvbullet {\color{medgray}
-        \textbf{Gained hands-on experience} in developing efficient deep-learning pipelines for computer vision applications, focusing on model compactness and structural health monitoring.}
-    \cvbullet {\color{medgray}
-        \stacklabel
-        \tstack{PyTorch, OpenCV, ReactJS, NodeJS, PostgreSQL, Docker}}
-\end{cvitems}
-
-\entrygap
-
-\cventry{Research Assistant}{Supervisor: Prof.\ Khonsari}%
-        {Sep 2024 -- Present}{High Performance Networks Lab, Tehran University}
-\begin{cvitems}
-    \cvbullet {\color{medgray}
-        \textbf{Developed} deep reinforcement learning systems for complex agricultural decision-making, focusing on reward engineering and policy optimization to balance multiple objectives.}
-    \cvbullet {\color{medgray}
-        \textbf{Acquired proficiency} in benchmarking reinforcement learning algorithms across discrete and continuous action spaces, and in utilizing simulation environments for training and evaluation.}
-    \cvbullet {\color{medgray}
-        \stacklabel
-        \tstack{PyTorch, TensorFlow, Pandas, NumPy}}
-\end{cvitems}
-
-\entrygap
-
-\cventry{Research Assistant}{Supervisor: Dr.\ Dolati}%
-        {Sep 2025 -- Present}{Sharif University of Technology}
-\begin{cvitems}
-    \cvbullet {\color{medgray}
-        \textbf{Formulated} MDPs for switch pairing and collaborative rule caching, and designed simulation environments for joint scheduling-routing policies in programmable data planes.}
-    \cvbullet {\color{medgray}
-        \textbf{Implemented} optimization frameworks for in-network aggregation in distributed machine learning, focusing on ILP decomposition, flexible routing strategies, and scalable algorithmic design.}
-    \cvbullet {\color{medgray}
-        \stacklabel
-        \tstack{PyTorch, Numba, Pandas, NumPy}}
-\end{cvitems}
-
-\entrygap
-
-\cventry{Teaching Assistant}{Graduate \& Undergraduate Courses}%
-        {Sep 2024 -- Present}{Amirkabir University of Technology \& Tehran University}
-\begin{tatable}
-    \cvta{Data Mining}{B.Sc.}{Dr.\ Yousefimehr}{Sep 2026 -- Present}
-    \cvta{Quantum Information Processing}{M.Sc.}{Prof.\ Khonsari}{Sep 2025 -- Jan 2026}
-    \cvta{Computational Data Mining}{M.Sc.}{Prof.\ Ghatee}{Sep 2025 -- Jan 2026}
-    \cvta{Introduction to Logic}{B.Sc.}{Dr.\ Didehvar}{Sep 2025 -- Jan 2026}
-    \cvta{Theory of Computation}{B.Sc.}{Dr.\ Didehvar}{Sep 2024 -- Jun 2026}
-    \cvta{Artificial Intelligence \& Workshop}{B.Sc.}{Prof.\ Ghatee, Dr.\ Yousefimehr}{Sep 2024 -- Jan 2025}
-\end{tatable}
-
-% ══════════════════════════════════════════════════════════
 %  PUBLICATIONS
 % ══════════════════════════════════════════════════════════
 \section{Publications}
 
-\begin{cvitems}[itemsep=5pt]
+\cvpubgroup{\faBookOpen}{Journal Articles}
+\begin{cvitems}[itemsep=3pt]
 \interlinepenalty=10000  % never split a reference across pages
     \cvbullet {\color{medgray}
         M.\ Saberi, \underline{A.\ Ahmadi Esfidi}, M.\ Dolati, N.\ Omidvar,
@@ -305,11 +282,75 @@
         M.\ Saberi, \underline{A.\ Ahmadi Esfidi}, M.\ Dolati, A.\ Khonsari, A.\ Movaghar,
         \textbf{Rule Caching in Programmable Networks with Deep Reinforcement Learning},
         Submitted to \textit{IEEE Transactions on Network and Service Management}.}
+\end{cvitems}
+
+\vspace{5pt}
+\cvpubgroup{\faUsers}{Conference Papers}
+\begin{cvitems}[itemsep=3pt]
+\interlinepenalty=10000  % never split a reference across pages
     \cvbullet {\color{medgray}
         P.\ Heidari, \underline{A.\ Ahmadi Esfidi}, A.\ Mehrvarz, E.\ Khodaei, A.\ Khonsari,
         \textbf{Irrigation Optimization in Agricultural Fields Using Deep Reinforcement Learning Approaches},
         Published in \textit{CSICC 2025}. \href{https://doi.org/10.1109/CSICC65765.2025.10967419}{\texttt{View Paper}}.}
 \end{cvitems}
+
+% ══════════════════════════════════════════════════════════
+%  EXPERIENCE
+% ══════════════════════════════════════════════════════════
+\section{Research Experience}
+
+\cventry{Research Assistant\parttime}{Supervisor: Prof.\ Ghatee}%
+        {Jan 2025 -- Present}{NORC Lab, Amirkabir University of Technology}
+\begin{cvitems}
+    \cvbullet {\color{medgray}
+        \textbf{Led} an AI team and \textbf{engineered} web systems and deep learning models for automated bridge damage detection in collaboration with the Tehran Urban Planning and Research Center.}
+    \cvbullet {\color{medgray}
+        \textbf{Gained hands-on experience} in developing efficient deep-learning pipelines for computer vision applications, focusing on model compactness and structural health monitoring.}
+    \cvbullet {\color{medgray}
+        \stacklabel
+        \tstack{PyTorch, OpenCV, ReactJS, NodeJS, PostgreSQL, Docker}}
+\end{cvitems}
+
+\entrygap
+
+\cventry{Research Assistant\parttime}{Supervisor: Prof.\ Khonsari}%
+        {Sep 2024 -- Present}{High Performance Networks Lab, Tehran University}
+\begin{cvitems}
+    \cvbullet {\color{medgray}
+        \textbf{Developed} deep reinforcement learning systems for complex agricultural decision-making, focusing on reward engineering and policy optimization to balance multiple objectives.}
+    \cvbullet {\color{medgray}
+        \textbf{Acquired proficiency} in benchmarking reinforcement learning algorithms across discrete and continuous action spaces, and in utilizing simulation environments for training and evaluation.}
+    \cvbullet {\color{medgray}
+        \stacklabel
+        \tstack{PyTorch, TensorFlow, Pandas, NumPy}}
+\end{cvitems}
+
+\entrygap
+
+\cventry{Research Assistant\parttime}{Supervisor: Dr.\ Dolati}%
+        {Sep 2025 -- Present}{Sharif University of Technology}
+\begin{cvitems}
+    \cvbullet {\color{medgray}
+        \textbf{Formulated} MDPs for switch pairing and collaborative rule caching, and designed simulation environments for joint scheduling-routing policies in programmable data planes.}
+    \cvbullet {\color{medgray}
+        \textbf{Implemented} optimization frameworks for in-network aggregation in distributed machine learning, focusing on ILP decomposition, flexible routing strategies, and scalable algorithmic design.}
+    \cvbullet {\color{medgray}
+        \stacklabel
+        \tstack{PyTorch, Numba, Pandas, NumPy}}
+\end{cvitems}
+
+\newpage
+\section{Teaching Experience}
+
+\cventry{Teaching Assistant\parttime}{Graduate \& Undergraduate Courses}%
+        {Sep 2024 -- Present}{Amirkabir University of Technology \& Tehran University}
+\begin{tatable}
+    \cvta{Data Mining}{B.Sc.}{Dr.\ Yousefimehr}{Sep 2026 -- Present}
+    \cvta{Computational Data Mining}{M.Sc.}{Prof.\ Ghatee}{Sep 2025 -- Jan 2026}
+    \cvta{Introduction to Logic}{B.Sc.}{Dr.\ Didehvar}{Sep 2025 -- Jan 2026}
+    \cvta{Theory of Computation}{B.Sc.}{Dr.\ Didehvar}{Sep 2024 -- Jun 2026}
+    \cvta{Artificial Intelligence \& Workshop}{B.Sc.}{Prof.\ Ghatee, Dr.\ Yousefimehr}{Sep 2024 -- Jan 2025}
+\end{tatable}
 
 % ══════════════════════════════════════════════════════════
 %  PROJECTS
@@ -337,18 +378,6 @@
     \cvbullet {\color{medgray}
         \stacklabel
         \tstack{PyTorch, Gymnasium, NumPy}}
-\end{cvitems}
-
-\entrygap
-
-\cvproject{Machine Learning Perspectives on Gold-Binding Peptides}%
-          {https://github.com/Mr-Ahmadi/Gold-Binding-Peptides}{May 2025 -- Jun 2025}
-\begin{cvitems}
-    \cvbullet {\color{medgray}
-        \textbf{Applied} machine learning to classify and predict gold-binding affinity of peptide sequences, comparing regression and classification approaches across multiple featurization strategies.}
-    \cvbullet {\color{medgray}
-        \stacklabel
-        \tstack{PyTorch, Scikit-learn, Hugging Face, Pandas, NumPy/SciPy}}
 \end{cvitems}
 
 \entrygap
@@ -382,11 +411,11 @@
 % ══════════════════════════════════════════════════════════
 %  LANGUAGES
 % ══════════════════════════════════════════════════════════
-% \section{Languages}
+\section{Languages}
 
-% \begin{tabular}{@{}p{\labelcolw}@{}l@{}}
-%     \cvlang{Persian}{Native} & \cvlang{English}{Fluent}
-% \end{tabular}
+\begin{tabular}{@{}p{\labelcolw}@{}l@{}}
+    \cvlang{Persian}{Native} & \cvlang{English}{Fluent}
+\end{tabular}
 
 % ══════════════════════════════════════════════════════════
 %  CERTIFICATIONS
@@ -396,7 +425,6 @@
 \cvmisc{Nov 2025}%
        {Bioinformatics Internship Program}%
        {\href{https://drive.google.com/file/d/1Sq-hCLrasHlw_BRVucsxccK2731pjX_V/view}{Biocan}}%
-       {\faCertificate}%
        {Scientific Secretary: Dr.\ Z.\ Salehi
         \tdot Course Director: Dr.\ K.\ Kavousi}
 
@@ -405,7 +433,6 @@
 \cvmisc{Jul 2025}%
        {Introduction to Bioinformatics}%
        {\href{https://drive.google.com/file/d/1wQgazces8McKTpEEtXOt706EJZTsZOQ0/view}{Biocan}}%
-       {\faCertificate}%
        {Scientific Chair: Dr.\ K.\ Kavousi
         \tdot Score: 96/100
         \tdot Top 3\% of 350+ students}
@@ -415,7 +442,6 @@
 \cvmisc{Dec 2024}%
        {Scrum Foundations Course}%
        {\href{https://drive.google.com/file/d/1NJ5aD03rufClRxjFiiH41jTgAVAnIFnK/view}{Ultima Training Tech}}%
-       {\faCertificate}%
        {Instructor: Josef Balahan}
 
 % ══════════════════════════════════════════════════════════
@@ -426,7 +452,6 @@
 \cvmisc{Dec 2025 -- Present}%
        {Student Scientific Magazine ``Halghe''}%
        {Amirkabir University of Technology}%
-       {\faCalendar[regular]}%
        {Contributed to scientific editing and supported the editorial team}
 
 \entrygap
@@ -434,9 +459,30 @@
 \cvmisc{May 2023, Feb 2025}%
        {Technical \& Web Support Volunteer}%
        {Amirkabir University of Technology}%
-       {\faCalendar[regular]}%
        {Web and procurement support for DAI DAY (2025) and the
         International Conference on AI and Smart Vehicles (2023)}
+
+% ══════════════════════════════════════════════════════════
+%  REFERENCES
+% ══════════════════════════════════════════════════════════
+\section{References}
+
+\noindent
+\cvrefcard{Prof.\ Mehdi Ghatee}{https://scholar.google.com/citations?user=b7lfEJwAAAAJ\&hl=en}%
+          {Professor of Computer Science}%
+          {Amirkabir University of Technology}%
+          {ghatee@aut.ac.ir}%
+\hfill
+\cvrefcard{Prof.\ Ahmad Khonsari}{https://scholar.google.com/citations?user=Xfvk1SoAAAAJ\&hl=en}%
+          {Professor of Electrical and Computer Engineering}%
+          {University of Tehran}%
+          {a_khonsari@ut.ac.ir}%
+\hfill
+\cvrefcard{Dr.\ Mahdi Dolati}{https://scholar.google.com/citations?user=b7A2CXYAAAAJ\&hl=en}%
+          {Assistant Professor of Computer Engineering}%
+          {Sharif University of Technology}%
+          {mdolati@sharif.edu}
+\par
 
 \vfill
 \begin{center}
